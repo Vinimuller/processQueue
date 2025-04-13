@@ -1,2 +1,52 @@
 ﻿  DungeonPOO.cpp
-  DungeonPOO.vcxproj -> C:\Users\silve\Codes\DungeonPOO\x64\Debug\DungeonPOO.exe
+  Personagem.cpp
+  Generating Code...
+C:\Users\silve\Codes\DungeonPOO\Personagem.h(26,16): error C2061: syntax error: identifier 'Magia'
+  (compiling source file 'Personagem.cpp')
+  
+C:\Users\silve\Codes\DungeonPOO\Personagem.h(27,15): error C2061: syntax error: identifier 'Item'
+  (compiling source file 'Personagem.cpp')
+  
+C:\Users\silve\Codes\DungeonPOO\Personagem.h(28,18): error C2061: syntax error: identifier 'Item'
+  (compiling source file 'Personagem.cpp')
+  
+C:\Users\silve\Codes\DungeonPOO\Personagem.h(45,11): error C3646: 'magias': unknown override specifier
+  (compiling source file 'Personagem.cpp')
+  
+C:\Users\silve\Codes\DungeonPOO\Personagem.h(45,2): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Personagem.cpp')
+  
+C:\Users\silve\Codes\DungeonPOO\Personagem.h(46,7): error C3646: 'inventario': unknown override specifier
+  (compiling source file 'Personagem.cpp')
+  
+C:\Users\silve\Codes\DungeonPOO\Personagem.h(46,17): error C2143: syntax error: missing ',' before '['
+  (compiling source file 'Personagem.cpp')
+  
+C:\Users\silve\Codes\DungeonPOO\Personagem.h(46,21): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'Personagem.cpp')
+  
+C:\Users\silve\Codes\DungeonPOO\Personagem.h(47,7): error C3646: 'tesouros': unknown override specifier
+  (compiling source file 'Personagem.cpp')
+  
+C:\Users\silve\Codes\DungeonPOO\Personagem.h(47,15): error C2143: syntax error: missing ',' before '['
+  (compiling source file 'Personagem.cpp')
+  
+C:\Users\silve\Codes\DungeonPOO\Personagem.h(47,19): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'Personagem.cpp')
+  
+C:\Users\silve\Codes\DungeonPOO\Personagem.cpp(64,18): error C2761: 'void Personagem::addMagia(void)': redeclaration of member is not allowed
+C:\Users\silve\Codes\DungeonPOO\Personagem.cpp(64,27): error C2065: 'Magia': undeclared identifier
+C:\Users\silve\Codes\DungeonPOO\Personagem.cpp(64,33): error C2146: syntax error: missing ')' before identifier 'novaMagia'
+C:\Users\silve\Codes\DungeonPOO\Personagem.cpp(65,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\silve\Codes\DungeonPOO\Personagem.cpp(65,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\silve\Codes\DungeonPOO\Personagem.cpp(69,18): error C2761: 'void Personagem::addItem(void)': redeclaration of member is not allowed
+C:\Users\silve\Codes\DungeonPOO\Personagem.cpp(69,26): error C2065: 'Item': undeclared identifier
+C:\Users\silve\Codes\DungeonPOO\Personagem.cpp(69,31): error C2146: syntax error: missing ')' before identifier 'novoItem'
+C:\Users\silve\Codes\DungeonPOO\Personagem.cpp(70,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\silve\Codes\DungeonPOO\Personagem.cpp(70,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\silve\Codes\DungeonPOO\Personagem.cpp(74,18): error C2761: 'void Personagem::addTesouro(void)': redeclaration of member is not allowed
+C:\Users\silve\Codes\DungeonPOO\Personagem.cpp(74,29): error C2065: 'Item': undeclared identifier
+C:\Users\silve\Codes\DungeonPOO\Personagem.cpp(74,34): error C2146: syntax error: missing ')' before identifier 'novoTesouro'
+C:\Users\silve\Codes\DungeonPOO\Personagem.cpp(75,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\silve\Codes\DungeonPOO\Personagem.cpp(75,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\silve\Codes\DungeonPOO\Personagem.cpp(113,2): error C2059: syntax error: '}'
