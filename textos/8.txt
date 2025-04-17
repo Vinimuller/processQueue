@@ -1,0 +1,6 @@
+Cena 8: Encruzilhada dos Ecos
+Três caminhos: um com vozes, outro com silêncio absoluto, outro com vento.
+Ação: Escolher caminho baseado em dicas do ambiente.
+
+Evento possível: Escolha errada leva a combate com um Mímico Gigante.
+Recompensa: Arco Sussurrante (ataques silenciosos, +chance de crítico).

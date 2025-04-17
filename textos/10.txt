@@ -1,0 +1,6 @@
+Cena 10: O Santuário da Lâmina Eterna
+No centro de um lago subterrâneo, uma espada cravada em uma pedra.
+Ação: Puxar a lâmina ou observar o ambiente.
+
+Evento possível: A dungeon tenta impedir sua saída (desmoronamento ou emboscada final).
+Recompensa: Lâmina Eterna — escolha: usá-la, destruí-la ou escondê-la novamente.

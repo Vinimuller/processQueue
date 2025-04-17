@@ -1,0 +1,6 @@
+Cena 3: Corredor da Névoa
+Uma névoa espessa impede a visão. Sussurros ecoam. Algo caminha por ali…
+Ação: Acender uma tocha ou andar no escuro.
+
+Evento possível: Encontro com Espectros da Perdição.
+Recompensa: Amuleto de Visão (permite ver inimigos invisíveis).

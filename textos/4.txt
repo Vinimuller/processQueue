@@ -1,0 +1,6 @@
+Cena 4: O Poço do Sacrifício
+Uma sala com um poço negro no centro. Um altar pede "sangue voluntário".
+Ação: Oferecer HP, um item, ou ignorar.
+
+Evento possível: Ao sacrificar algo, abre-se uma passagem secreta.
+Recompensa: Daga Vampírica (cura parte do dano causado).

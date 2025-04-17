@@ -1,0 +1,6 @@
+Cena 1: A Entrada de Pedra
+Você chega ao portão da dungeon. Ele se abre sozinho com um estrondo surdo. Musgo cobre as paredes e o ar cheira a metal oxidado.
+Ação: Entrar ou acampar para se preparar.
+
+Evento possível: Um grupo de kobolds embosca você logo após a entrada.
+Recompensa: Poção de Cura + Kit de Sobrevivência.

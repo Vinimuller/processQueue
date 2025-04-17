@@ -1,0 +1,6 @@
+Cena 7: Sala das Armadilhas
+Paredes se movem. Lâminas surgem do chão. Um desafio de reflexos.
+Ação: Rolar destreza, usar ferramentas ou invocar magia.
+
+Evento possível: Dano por falha ou acesso direto a sala do tesouro.
+Recompensa: Elmo dos Reflexos (+2 Destreza).
