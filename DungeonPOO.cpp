@@ -1,20 +1,63 @@
-// DungeonPOO.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <limits>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+void exibirCena(int cenaAtual) {
+    std::string nomeArquivo = "textos/" + std::to_string(cenaAtual) + ".txt";
+    std::ifstream arquivo(nomeArquivo);
+
+    if (!arquivo.is_open()) {
+        std::cout << "Não foi possível abrir o arquivo da cena " << cenaAtual << ".\n";
+        return;
+    }
+
+    std::string linha;
+    while (std::getline(arquivo, linha)) {
+        std::cout << linha << std::endl;
+    }
+
+    arquivo.close();
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+int obterEscolhaUsuario() {
+    int escolha;
+    std::cout << "\nEscolha sua ação:\n";
+    std::cout << "1 - Continuar para a próxima cena\n";
+    std::cout << "0 - Sair do jogo\n";
+    std::cout << ">> ";
+    std::cin >> escolha;
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+    while (std::cin.fail() || (escolha != 1 && escolha != 0)) {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "Entrada inválida. Tente novamente: ";
+        std::cin >> escolha;
+    }
+
+    return escolha;
+}
+
+int main() {
+    int cena = 1;
+    const int totalCenas = 10;
+
+    while (cena <= totalCenas) {
+        std::cout << "\n=== Cena " << cena << " ===\n\n";
+        exibirCena(cena);
+
+        int escolha = obterEscolhaUsuario();
+        if (escolha == 0) {
+            std::cout << "Você abandonou a dungeon. Fim de jogo.\n";
+            break;
+        }
+
+        cena++;
+    }
+
+    if (cena > totalCenas) {
+        std::cout << "\nVocê completou a Dungeon de Thal'Zul! Parabéns!\n";
+    }
+
+    return 0;
+}

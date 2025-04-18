@@ -3,7 +3,7 @@ CXX = g++
 CXXFLAGS = -Wall -Wextra -std=c++17
 
 # Arquivos fonte e objeto
-SOURCES = DungeonPOO.cpp Item.cpp Personagem.cpp
+SOURCES = DungeonPOO.cpp 
 OBJECTS = $(SOURCES:.cpp=.o)
 
 # Nome do executável
