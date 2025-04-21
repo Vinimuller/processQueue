@@ -1,10 +1,8 @@
 #include <iostream>
-#include <fstream>
 #include <string>
-#include <limits>
 
-#include "classes/LeitorArquivo.h"
-#include "classes/UserInput.h"
+#include "../inc/classes/LeitorArquivo.h"
+#include "../inc/classes/UserInput.h"
 
 LeitorArquivo leitorArquivo;
 UserInput userInput;
@@ -21,11 +19,14 @@ int main() {
         case 1:
             // Nova aventura
             cout << "nova adv" << endl;
+            break;
         case 2:
             // Carregar aventura 
             cout << "carregar adv" << endl;
+            break;
         default:
             cout << "nothing here" << endl;
+            break;
     }
 
 

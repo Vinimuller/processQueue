@@ -1,37 +1,39 @@
 # Compilador e flags
 CXX = g++
-CXXFLAGS = -Wall -Wextra -std=c++17
+CXXFLAGS = -Wall -Wextra -std=c++17 -Iinclude
 
-# Pastas
+# Diretórios
+SRCDIRS = src
+INCDIR = inc
 OUTDIR = out
 
-# Arquivos fonte
-SOURCES = DungeonPOO.cpp
+# Busca todos os .cpp nas pastas de código-fonte
+SOURCES = $(foreach dir,$(SRCDIRS),$(wildcard $(dir)/*.cpp))
 
-# Arquivos objeto na pasta de saída
-OBJECTS = $(patsubst %.cpp,$(OUTDIR)/%.o,$(SOURCES))
+# Gera os caminhos dos objetos na pasta out/
+OBJECTS = $(patsubst %.cpp,$(OUTDIR)/%.o,$(notdir $(SOURCES)))
 
-# Nome do executável (com caminho de saída)
+# Executável
 TARGET = $(OUTDIR)/app
 
 # Regra padrão
 all: $(TARGET)
 
-# Criação do executável
+# Linkagem final
 $(TARGET): $(OBJECTS)
 	@mkdir -p $(OUTDIR)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
-# Compilação dos .cpp para .o na pasta out
-$(OUTDIR)/%.o: %.cpp
+# Regra para compilar .cpp → .o na pasta out/
+$(OUTDIR)/%.o: $(SRCDIRS)/%.cpp
 	@mkdir -p $(OUTDIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# Diretiva para compilar e rodar
+# Executar
 run: all
 	./$(TARGET)
 
-# Limpeza dos arquivos gerados
+# Limpeza
 clean:
 	rm -rf $(OUTDIR)
 

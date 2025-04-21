@@ -1,4 +1,4 @@
-#include "LeitorArquivo.h"
+#include "../inc/classes/LeitorArquivo.h"
 
 
 void LeitorArquivo::exibirCena(int cenaAtual) {

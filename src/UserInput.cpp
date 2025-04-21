@@ -1,4 +1,4 @@
-#include "UserInput.h"
+#include "../inc/classes/UserInput.h"
 
 // Lê um número inteiro do usuário
 int UserInput::readNumber() {
