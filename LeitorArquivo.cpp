@@ -18,6 +18,23 @@ void LeitorArquivo::exibirCena(int cenaAtual) {
     arquivo.close();
 }
 
+void LeitorArquivo::exibirCena(string cenaAtual) {
+    std::string nomeArquivo = "textos/" + cenaAtual + ".txt";
+    std::ifstream arquivo(nomeArquivo);
+
+    if (!arquivo.is_open()) {
+        std::cout << "Não foi possível abrir o arquivo da cena " << cenaAtual << ".\n";
+        return;
+    }
+
+    std::string linha;
+    while (std::getline(arquivo, linha)) {
+        std::cout << linha << std::endl;
+    }
+
+    arquivo.close();
+}
+
 int LeitorArquivo::obterEscolhaUsuario() {
     int escolha;
     std::cout << "\nEscolha sua ação:\n";

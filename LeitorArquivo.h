@@ -6,10 +6,14 @@
 #include <string>
 #include <limits>
 
+using namespace std;
+
 class LeitorArquivo
 {
 public:
 	void exibirCena(int cenaAtual);
+	void exibirCena(string cenaAtual);
+
 	int obterEscolhaUsuario();
 
 private:

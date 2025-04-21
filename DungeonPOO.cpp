@@ -8,6 +8,12 @@
 LeitorArquivo leitorArquivo;
 
 int main() {
+
+    //Tela de Menu
+        // 1 -> Nova Aventura
+        // 2 -> Carregar Aventura
+    leitorArquivo.exibirCena("menu");
+    
     int cena = 1;
     const int totalCenas = 10;
 
