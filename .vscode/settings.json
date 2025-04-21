@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "iosfwd": "cpp",
+        "string": "cpp",
+        "__split_buffer": "cpp",
+        "atomic": "cpp",
+        "deque": "cpp",
+        "filesystem": "cpp",
+        "ios": "cpp",
+        "system_error": "cpp",
+        "__hash_table": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp"
+    }
+}

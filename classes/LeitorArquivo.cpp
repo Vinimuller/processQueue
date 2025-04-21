@@ -6,7 +6,7 @@ void LeitorArquivo::exibirCena(int cenaAtual) {
     std::ifstream arquivo(nomeArquivo);
 
     if (!arquivo.is_open()) {
-        std::cout << "Não foi possível abrir o arquivo da cena " << cenaAtual << ".\n";
+        std::cout << "NÃ£o foi possÃ­vel abrir o arquivo da cena " << cenaAtual << ".\n";
         return;
     }
 
@@ -23,7 +23,7 @@ void LeitorArquivo::exibirCena(string cenaAtual) {
     std::ifstream arquivo(nomeArquivo);
 
     if (!arquivo.is_open()) {
-        std::cout << "Não foi possível abrir o arquivo da cena " << cenaAtual << ".\n";
+        std::cout << "NÃ£o foi possÃ­vel abrir o arquivo da cena " << cenaAtual << ".\n";
         return;
     }
 
@@ -37,8 +37,8 @@ void LeitorArquivo::exibirCena(string cenaAtual) {
 
 int LeitorArquivo::obterEscolhaUsuario() {
     int escolha;
-    std::cout << "\nEscolha sua ação:\n";
-    std::cout << "1 - Continuar para a próxima cena\n";
+    std::cout << "\nEscolha sua aï¿½ï¿½o:\n";
+    std::cout << "1 - Continuar para a prï¿½xima cena\n";
     std::cout << "0 - Sair do jogo\n";
     std::cout << ">> ";
     std::cin >> escolha;
@@ -46,7 +46,7 @@ int LeitorArquivo::obterEscolhaUsuario() {
     while (std::cin.fail() || (escolha != 1 && escolha != 0)) {
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cout << "Entrada inválida. Tente novamente: ";
+        std::cout << "Entrada invï¿½lida. Tente novamente: ";
         std::cin >> escolha;
     }
 
