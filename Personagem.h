@@ -23,9 +23,9 @@ public:
 
 	void addEnergia(int energiaAdicionada);
 	void addSorte(int sorteAdicionada);
-	void addMagia(Magia novaMagia);
-	void addItem(Item novoItem);
-	void addTesouro(Item novoTesouro);
+	//void addMagia(Magia novaMagia);
+	//void addItem(Item novoItem);
+	//void addTesouro(Item novoTesouro);
 	void addProvisao(int provisaoAdicionada = 1);
 
 	void removerEnergia(int energiaRemovida);
@@ -42,9 +42,9 @@ protected:
 	int energia;
 	int sorte;
 	int habilidade;
-	Grimorio magias;
-	Item inventario[10];
-	Item tesouros[10];
+	//Grimorio magias;
+	//Item inventario[10];
+	//Item tesouros[10];
 	int quantidadeDeProvisoes;
 	int energiaRecuperadaPorProvisao = 4;
 };

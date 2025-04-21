@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\silve\\Codes\\DungeonPOO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|C:\\Users\\silve\\Codes\\DungeonPOO\\Personagem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|solutionrelative:Personagem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|C:\\Users\\silve\\Codes\\DungeonPOO\\DungeonPOO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|solutionrelative:DungeonPOO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|C:\\Users\\silve\\Codes\\DungeonPOO\\Personagem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|solutionrelative:Personagem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|C:\\Users\\silve\\Codes\\DungeonPOO\\DungeonPOO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|solutionrelative:DungeonPOO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|C:\\Users\\silve\\Codes\\DungeonPOO\\Personagem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|solutionrelative:Personagem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Personagem.cpp",
               "DocumentMoniker": "C:\\Users\\silve\\Codes\\DungeonPOO\\Personagem.cpp",
               "RelativeDocumentMoniker": "Personagem.cpp",
               "ToolTip": "C:\\Users\\silve\\Codes\\DungeonPOO\\Personagem.cpp",
               "RelativeToolTip": "Personagem.cpp",
-              "ViewState": "AgIAAGIAAAAAAAAAAAASwG8AAAACAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAAEEAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-12T22:15:47.005Z",
               "EditorCaption": ""
@@ -45,20 +45,20 @@
               "RelativeDocumentMoniker": "Personagem.h",
               "ToolTip": "C:\\Users\\silve\\Codes\\DungeonPOO\\Personagem.h",
               "RelativeToolTip": "Personagem.h",
-              "ViewState": "AgIAABEAAAAAAAAAAAASwCMAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAIAwwBwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-12T22:03:01.298Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "DungeonPOO.cpp",
               "DocumentMoniker": "C:\\Users\\silve\\Codes\\DungeonPOO\\DungeonPOO.cpp",
               "RelativeDocumentMoniker": "DungeonPOO.cpp",
               "ToolTip": "C:\\Users\\silve\\Codes\\DungeonPOO\\DungeonPOO.cpp",
               "RelativeToolTip": "DungeonPOO.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAwwCkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-12T13:54:56.128Z",
               "EditorCaption": ""

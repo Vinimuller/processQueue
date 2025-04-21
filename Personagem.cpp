@@ -61,20 +61,20 @@ void Personagem::addSorte(int sorteAdicionada)
 	this->sorte = sorteAdicionada;
 }
 
-void Personagem::addMagia(Magia novaMagia)
-{
-	//adicionar magias no grimório do personagem
-}
-
-void Personagem::addItem(Item novoItem)
-{
-	//adiciona itens no inventario do personagem
-}
-
-void Personagem::addTesouro(Item novoTesouro)
-{
-	//adiciona tesouros no inventario do personagem
-}
+//void Personagem::addMagia(Magia novaMagia)
+//{
+//	//adicionar magias no grimório do personagem
+//}
+//
+//void Personagem::addItem(Item novoItem)
+//{
+//	//adiciona itens no inventario do personagem
+//}
+//
+//void Personagem::addTesouro(Item novoTesouro)
+//{
+//	//adiciona tesouros no inventario do personagem
+//}
 
 void Personagem::addProvisao(int provisaoAdicionada)
 {
