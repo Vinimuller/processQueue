@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
 
-#include "../inc/classes/LeitorArquivo.h"
+#include "../inc/classes/Arquivos.h"
 #include "../inc/classes/UserInput.h"
 
-LeitorArquivo leitorArquivo;
+Arquivos arquivo;
 UserInput userInput;
 
 int main() {
@@ -12,7 +12,7 @@ int main() {
     //Tela de Menu
         // 1 -> Nova Aventura
         // 2 -> Carregar Aventura
-    leitorArquivo.exibirCena("menu");
+    arquivo.exibirCena("menu");
     int menuSelection = userInput.readNumber();
 
     switch(menuSelection){
@@ -30,14 +30,24 @@ int main() {
     }
 
 
+    // exemplo escrita arquivo
+    arquivo.escreverArquivo("testFile.txt", "teste\nteste\ntest");
+
+    //exemplo leitura aquivo
+    string readFile = arquivo.lerArquivo("testFile.txt");
+
+    cout << readFile << endl << endl << endl;
+
+
+
     //codigo teste de carregamento cenas >>>>
     int cena = 1;
     const int totalCenas = 10;
     while (cena <= totalCenas) {
         std::cout << "\n=== Cena " << cena << " ===\n\n";
-        leitorArquivo.exibirCena(cena);
+        arquivo.exibirCena(cena);
 
-        int escolha = leitorArquivo.obterEscolhaUsuario();
+        int escolha = userInput.readNumber();
         if (escolha == 0) {
             std::cout << "Você abandonou a dungeon. Fim de jogo.\n";
             break;

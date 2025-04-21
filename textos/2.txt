@@ -4,3 +4,12 @@ Ação: Fugir, atacar, ou tentar resolver o enigma aos pés da estátua.
 
 Evento possível: Batalha contra um Guardião de Pedra.
 Recompensa: Escudo Rúnico (+5 Defesa mágica).
+
+Escolha sua ação:
+
+1 -> Atacar
+2 -> Fugir
+3 -> Resolver Enigma
+0 -> Abandonar jogo
+
+>> 

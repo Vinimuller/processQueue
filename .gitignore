@@ -2,4 +2,5 @@
 out/
 x64/
 .vs/
+.vscode/
 DungeonPOO/
