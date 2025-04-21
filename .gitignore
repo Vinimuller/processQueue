@@ -1,2 +1,5 @@
 .DS_Store
-out/*
+out/
+x64/
+.vs/
+DungeonPOO/
