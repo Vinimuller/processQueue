@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\silve\\Codes\\DungeonPOO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silve\\Codes\\DungeonPOO\\DungeonPOO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DungeonPOO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|C:\\Users\\silve\\Codes\\DungeonPOO\\LeitorArquivo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|solutionrelative:LeitorArquivo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silve\\Codes\\DungeonPOO\\Personagem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Personagem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|C:\\Users\\silve\\Codes\\DungeonPOO\\DungeonPOO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|solutionrelative:DungeonPOO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silve\\Codes\\DungeonPOO\\Personagem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Personagem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|C:\\Users\\silve\\Codes\\DungeonPOO\\LeitorArquivo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|solutionrelative:LeitorArquivo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|C:\\Users\\silve\\Codes\\DungeonPOO\\Personagem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|solutionrelative:Personagem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|C:\\Users\\silve\\Codes\\DungeonPOO\\Personagem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{455B85FA-5DDD-4147-8511-DE914690D457}|DungeonPOO.vcxproj|solutionrelative:Personagem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +30,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LeitorArquivo.cpp",
+              "DocumentMoniker": "C:\\Users\\silve\\Codes\\DungeonPOO\\LeitorArquivo.cpp",
+              "RelativeDocumentMoniker": "LeitorArquivo.cpp",
+              "ToolTip": "C:\\Users\\silve\\Codes\\DungeonPOO\\LeitorArquivo.cpp",
+              "RelativeToolTip": "LeitorArquivo.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-21T20:18:59.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LeitorArquivo.h",
+              "DocumentMoniker": "C:\\Users\\silve\\Codes\\DungeonPOO\\LeitorArquivo.h",
+              "RelativeDocumentMoniker": "LeitorArquivo.h",
+              "ToolTip": "C:\\Users\\silve\\Codes\\DungeonPOO\\LeitorArquivo.h",
+              "RelativeToolTip": "LeitorArquivo.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-21T19:43:39.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "DungeonPOO.cpp",
+              "DocumentMoniker": "C:\\Users\\silve\\Codes\\DungeonPOO\\DungeonPOO.cpp",
+              "RelativeDocumentMoniker": "DungeonPOO.cpp",
+              "ToolTip": "C:\\Users\\silve\\Codes\\DungeonPOO\\DungeonPOO.cpp",
+              "RelativeToolTip": "DungeonPOO.cpp",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAIwB4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-12T13:54:56.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Personagem.cpp",
               "DocumentMoniker": "C:\\Users\\silve\\Codes\\DungeonPOO\\Personagem.cpp",
               "RelativeDocumentMoniker": "Personagem.cpp",
@@ -39,28 +86,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Personagem.h",
               "DocumentMoniker": "C:\\Users\\silve\\Codes\\DungeonPOO\\Personagem.h",
               "RelativeDocumentMoniker": "Personagem.h",
               "ToolTip": "C:\\Users\\silve\\Codes\\DungeonPOO\\Personagem.h",
               "RelativeToolTip": "Personagem.h",
-              "ViewState": "AgIAABYAAAAAAAAAAIAwwBwAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-12T22:03:01.298Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DungeonPOO.cpp",
-              "DocumentMoniker": "C:\\Users\\silve\\Codes\\DungeonPOO\\DungeonPOO.cpp",
-              "RelativeDocumentMoniker": "DungeonPOO.cpp",
-              "ToolTip": "C:\\Users\\silve\\Codes\\DungeonPOO\\DungeonPOO.cpp",
-              "RelativeToolTip": "DungeonPOO.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-12T13:54:56.128Z",
               "EditorCaption": ""
             }
           ]
