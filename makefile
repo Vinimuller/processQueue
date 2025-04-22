@@ -1,3 +1,18 @@
+# Detecta o sistema operacional
+ifeq ($(OS),Windows_NT)
+    RM = del /Q /F
+    RMDIR = rmdir /S /Q
+    MKDIR = if not exist "$(OUTDIR)" mkdir "$(OUTDIR)"
+    EXEC_EXT = .exe
+    RUN = $(TARGET)
+else
+    RM = rm -f
+    RMDIR = rm -rf
+    MKDIR = mkdir -p $(OUTDIR)
+    EXEC_EXT =
+    RUN = ./$(TARGET)
+endif
+
 # Compilador e flags
 CXX = g++
 CXXFLAGS = -Wall -Wextra -std=c++17 -Iinclude
@@ -14,27 +29,28 @@ SOURCES = $(foreach dir,$(SRCDIRS),$(wildcard $(dir)/*.cpp))
 OBJECTS = $(patsubst %.cpp,$(OUTDIR)/%.o,$(notdir $(SOURCES)))
 
 # Executável
-TARGET = $(OUTDIR)/app
+TARGET = $(OUTDIR)/app$(EXEC_EXT)
 
 # Regra padrão
 all: $(TARGET)
 
 # Linkagem final
 $(TARGET): $(OBJECTS)
-	@mkdir -p $(OUTDIR)
+	@$(MKDIR)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 # Regra para compilar .cpp → .o na pasta out/
 $(OUTDIR)/%.o: $(SRCDIRS)/%.cpp
-	@mkdir -p $(OUTDIR)
+	@$(MKDIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 # Executar
 run: all
-	./$(TARGET)
+	$(RUN)
 
 # Limpeza
 clean:
-	rm -rf $(OUTDIR)
+	-$(RM) $(OUTDIR)/*$(EXEC_EXT) $(OUTDIR)/*.o 2>nul || true
+	-$(RMDIR) $(OUTDIR) 2>nul || true
 
 .PHONY: all clean run
