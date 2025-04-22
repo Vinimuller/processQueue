@@ -3,16 +3,20 @@
 
 #include "../inc/classes/Arquivos.h"
 #include "../inc/classes/UserInput.h"
+#include "../inc/classes/Tela.h"
+#include "../inc/classes/Menu.h"
 
 Arquivos arquivo;
 UserInput userInput;
+Tela tela;
+Menu menu;
 
 int main() {
 
     //Tela de Menu
         // 1 -> Nova Aventura
         // 2 -> Carregar Aventura
-    arquivo.exibirCena("menu");
+    menu.run();
     int menuSelection = userInput.readNumber();
 
     switch(menuSelection){
