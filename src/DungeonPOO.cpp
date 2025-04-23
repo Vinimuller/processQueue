@@ -5,17 +5,21 @@
 #include "../inc/classes/UserInput.h"
 #include "../inc/classes/Tela.h"
 #include "../inc/classes/Menu.h"
+#include "../inc/classes/Personagem.h"
 
 Arquivos arquivo;
 UserInput userInput;
 Tela tela;
 Menu menu;
+Personagem heroi;
 
 int main() {
 
     //Tela de Menu
         // 1 -> Nova Aventura
         // 2 -> Carregar Aventura
+
+    heroi.carregarPersonagem("personagem.txt");
     menu.run();
     int menuSelection = userInput.readNumber();
 

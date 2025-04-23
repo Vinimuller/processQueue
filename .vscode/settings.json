@@ -11,6 +11,9 @@
         "__hash_table": "cpp",
         "unordered_map": "cpp",
         "vector": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "fstream": "cpp",
+        "xlocmes": "cpp",
+        "iostream": "cpp"
     }
 }

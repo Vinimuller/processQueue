@@ -2,12 +2,17 @@
 #define PERSONAGEM_H
 
 #include <string>
+#include <map>
+#include <sstream>
+#include "Arquivos.h"
 using namespace std;
 
 class Personagem {
 public:
-	Personagem(string nome, int energia, int sorte);
 	Personagem();
+
+	void carregarPersonagem(string nomePersonagem = "personagem.txt");
+
 	
 	void setNome(string nome);
 	void setEnergia(int energia);
@@ -47,6 +52,8 @@ protected:
 	//Item tesouros[10];
 	int quantidadeDeProvisoes;
 	int energiaRecuperadaPorProvisao = 4;
+
+	Arquivos arquivo;
 };
 
 #endif

@@ -1,14 +1,35 @@
-#include "Personagem.h"
+#include "../inc/classes/Personagem.h"
 
-Personagem::Personagem(string nome, int energia, int sorte)
-{
-	this->nome = nome;
-	this->energia = energia;
-	this->sorte = sorte;
-}
+Personagem::Personagem(){};
 
-Personagem::Personagem()
+void Personagem::carregarPersonagem(string nomePersonagem)
 {
+	string personagemFormatado = arquivo.lerArquivo(nomePersonagem);
+
+	istringstream iss(personagemFormatado);
+    string linha;
+    map<char, std::string> atributos;
+
+    while (getline(iss, linha)) {
+        if (linha.find(':') != string::npos) {
+            char chave = linha[0];
+            std::string valor = linha.substr(3); // ignora "X: "
+            atributos[chave] = valor;
+        } else if (linha.find(';') != string::npos) {
+            atributos['X'] = linha; // posiÃ§Ã£o final
+        }
+    }
+
+	this->nome = atributos['N'];
+	this->habilidade = stoi(atributos['H']);
+	this->sorte = stoi(atributos['S']);
+	this->energia = stoi(atributos['E']);
+	this->quantidadeDeProvisoes = stoi(atributos['P']);
+	
+	cout << "Personagem carregado: " << this->nome << endl;
+	
+
+
 }
 
 void Personagem::setNome(string nome)
@@ -63,7 +84,7 @@ void Personagem::addSorte(int sorteAdicionada)
 
 //void Personagem::addMagia(Magia novaMagia)
 //{
-//	//adicionar magias no grimório do personagem
+//	//adicionar magias no grimï¿½rio do personagem
 //}
 //
 //void Personagem::addItem(Item novoItem)
@@ -96,7 +117,7 @@ bool Personagem::utilizarProvisao()
 	if (quantidadeDeProvisoes > 0) {
 		quantidadeDeProvisoes--;
 		energia += energiaRecuperadaPorProvisao;
-		//adicionar lógica para não ultrapassar o máximo de enrgia
+		//adicionar lï¿½gica para nï¿½o ultrapassar o mï¿½ximo de enrgia
 	}
 	return false;
 }
@@ -117,10 +138,10 @@ int Personagem::testeDeAtaque(bool usarSorte)
 
 
 int Personagem::usarSorte() {
-	// Declara as variáveis locais
+	// Declara as variï¿½veis locais
 	int numeroRandomizado = rand() % 12;
 	int resultado = abs(sorte - numeroRandomizado);
-	// Se o número randomizado for maior que a sorte, ele teve má sorte
+	// Se o nï¿½mero randomizado for maior que a sorte, ele teve mï¿½ sorte
 	if (numeroRandomizado % 12 > sorte) {
 		resultado = resultado*(-1);
 	}
