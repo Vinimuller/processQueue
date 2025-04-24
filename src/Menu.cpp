@@ -1,15 +1,19 @@
 #include "../inc/classes/Menu.h"
 
-Menu::Menu(){};
+Menu::Menu(){}
 
-Menu::~Menu(){};
+Menu::~Menu(){}
 
-void Menu::run(){
+int Menu::run(){
     arquivos.exibirCena("menu");
     int input = userInput.readNumber();
     if(input == novaAventura){
-        //novaAventura
+        return 1;
     } else if (input == carregarAventura){
-        //carregarAventura
+        return 2;
     }
+    else{
+        return run();
+    }
+    return 0;
 }

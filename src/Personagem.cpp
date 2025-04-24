@@ -32,6 +32,44 @@ void Personagem::carregarPersonagem(string nomePersonagem)
 
 }
 
+bool Personagem::save(string ultimaCena){
+	string newSave;
+	newSave += "N: ";
+	newSave += this->nome;
+	newSave += "\n";
+
+	newSave += "H: ";
+	newSave += to_string(this->habilidade);
+	newSave += "\n";
+
+	newSave += "S: ";
+	newSave += to_string(this->sorte);
+	newSave += "\n";
+
+	newSave += "E: ";
+	newSave += to_string(energia);
+	newSave += "\n";
+
+	// newSave += "T: ";
+	// newSave += this->tesouro;
+	// newSave += "\n";
+
+	newSave += "P: ";
+	newSave += to_string(this->quantidadeDeProvisoes);
+	newSave += "\n";
+
+	newSave += "C: ";
+	newSave += ultimaCena;
+	newSave += "\n";
+
+	arquivo.apagarArquivo("personagem.txt");
+
+	arquivo.escreverArquivo("personagem.txt", newSave);
+	
+	return true;
+
+}
+
 void Personagem::setNome(string nome)
 {
 	this->nome = nome;
@@ -74,12 +112,12 @@ int Personagem::getProvisoes()
 
 void Personagem::addEnergia(int energiaAdicionada)
 {
-	this->energia = energiaAdicionada;
+	this->energia += energiaAdicionada;
 }
 
 void Personagem::addSorte(int sorteAdicionada)
 {
-	this->sorte = sorteAdicionada;
+	this->sorte += sorteAdicionada;
 }
 
 //void Personagem::addMagia(Magia novaMagia)

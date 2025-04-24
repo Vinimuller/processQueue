@@ -1,7 +1,22 @@
 #include "../inc/classes/Arquivos.h"
 
+void Arquivos::apagarArquivo(const std::string& filename){
+    if (remove(filename.c_str()) != 0) {
+        cerr << "Erro ao apagar o arquivo: " << filename << "\n";
+    } else {
+        cout << "Arquivo apagado com sucesso: " << filename << "\n";
+    }
+}
 
 void Arquivos::exibirCena(int cenaAtual) {
+
+        // Clear the screen
+    #ifdef _WIN32
+        system("cls"); // For Windows
+    #else
+        system("clear"); // For Unix-like systems (Linux, macOS)
+    #endif
+
     std::string nomeArquivo = "textos/" + std::to_string(cenaAtual) + ".txt";
     std::ifstream arquivo(nomeArquivo);
 
@@ -19,8 +34,16 @@ void Arquivos::exibirCena(int cenaAtual) {
 }
 
 void Arquivos::exibirCena(string cenaAtual) {
+    // Clear the screen
+    #ifdef _WIN32
+        system("cls"); // For Windows
+    #else
+        system("clear"); // For Unix-like systems (Linux, macOS)
+    #endif
+
     std::string nomeArquivo = "textos/" + cenaAtual + ".txt";
     std::ifstream arquivo(nomeArquivo);
+    
 
     if (!arquivo.is_open()) {
         std::cout << "Não foi possível abrir o arquivo da cena " << cenaAtual << ".\n";

@@ -8,7 +8,7 @@ class Menu : public Tela {
 public:
     Menu();
     ~Menu();
-    void run();
+    int run();
 private:
     Arquivos arquivos;
     UserInput userInput;

@@ -40,8 +40,7 @@ public:
 	int testeDeAtaque(bool usarSorte);
 	int usarSorte();
 
-
-
+	bool save(string cena);
 protected:
 	string nome;
 	int energia;

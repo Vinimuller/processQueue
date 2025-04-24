@@ -6,6 +6,7 @@
 #include "../inc/classes/Tela.h"
 #include "../inc/classes/Menu.h"
 #include "../inc/classes/Personagem.h"
+#include "../inc/classes/OrquestradorCenas.h"
 
 Arquivos arquivo;
 UserInput userInput;
@@ -18,57 +19,27 @@ int main() {
     //Tela de Menu
         // 1 -> Nova Aventura
         // 2 -> Carregar Aventura
+    
 
-    heroi.carregarPersonagem("personagem.txt");
-    menu.run();
-    int menuSelection = userInput.readNumber();
-
-    switch(menuSelection){
+    switch(menu.run()){
         case 1:
             // Nova aventura
-            cout << "nova adv" << endl;
+            //heroi.criarNovo()
             break;
         case 2:
             // Carregar aventura 
-            cout << "carregar adv" << endl;
+            // Falta implementar o inventario
+            heroi.carregarPersonagem();
             break;
         default:
-            cout << "nothing here" << endl;
+            return 0;
             break;
     }
 
-
-    // exemplo escrita arquivo
-    arquivo.escreverArquivo("testFile.txt", "teste\nteste\ntest");
-
-    //exemplo leitura aquivo
-    string readFile = arquivo.lerArquivo("testFile.txt");
-
-    cout << readFile << endl << endl << endl;
-
-
-
-    //codigo teste de carregamento cenas >>>>
-    int cena = 1;
-    const int totalCenas = 10;
-    while (cena <= totalCenas) {
-        std::cout << "\n=== Cena " << cena << " ===\n\n";
-        arquivo.exibirCena(cena);
-
-        int escolha = userInput.readNumber();
-        if (escolha == 0) {
-            std::cout << "Você abandonou a dungeon. Fim de jogo.\n";
-            break;
-        }
-
-        cena++;
+    OrquestradorCenas orquestradorCenas(&heroi);
+    while(true){
+        orquestradorCenas.runCena();
+        //heroi.save(orquestradorCenas.getUltimaCena());
     }
-
-    if (cena > totalCenas) {
-        std::cout << "\nVocê completou a Dungeon de Thal'Zul! Parabéns!\n";
-    }
-
-    //codigo teste de carregamento cenas <<<<<
-
     return 0;
 }
