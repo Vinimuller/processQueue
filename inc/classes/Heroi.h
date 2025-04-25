@@ -11,6 +11,8 @@ public:
 
     void setUltimaCena(string ultimaCena);
     string getUltimaCena();
+    void carregarPersonagem(string nomePersonagem) override;
+    
     bool save();
 private:
     string ultimaCena;

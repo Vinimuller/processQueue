@@ -9,6 +9,7 @@
 #include "../inc/classes/Personagem.h"
 #include "../inc/classes/OrquestradorCenas.h"
 #include "../inc/classes/Heroi.h"
+#include "../inc/classes/CriacaoDePersonagem.h"
 
 using namespace std;
 
@@ -17,6 +18,8 @@ UserInput userInput;
 Tela tela;
 Menu menu;
 Heroi heroi;
+CriacaoDePersonagem criacaoDePersonagem;
+
 
 int main() {
     setlocale(LC_ALL, "pt_BR.UTF-8"); // usa o locale do sistema
@@ -29,13 +32,13 @@ int main() {
     switch(menu.run()){
         case 1:
             // Nova aventura
-            //heroi.criarNovo()
+            criacaoDePersonagem.run(&heroi);
             orquestradorCenas.setUltimaCena("1");
             break;
         case 2:
             // Carregar aventura 
             // Falta implementar o inventario
-            heroi.carregarPersonagem();
+            heroi.carregarPersonagem("personagem");
             orquestradorCenas.setUltimaCena(heroi.getUltimaCena());
             break;
         default:

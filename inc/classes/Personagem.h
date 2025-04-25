@@ -28,6 +28,7 @@ public:
 	int getProvisoes();
 
 	void addEnergia(int energiaAdicionada);
+	void addHabilidade(int energiaAdicionada);
 	void addSorte(int sorteAdicionada);
 	//void addMagia(Magia novaMagia);
 	//void addItem(Item novoItem);
@@ -43,9 +44,9 @@ public:
 
 protected:
 	string nome;
-	int energia;
-	int sorte;
-	int habilidade;
+	int energia = 12;
+	int sorte = 6;
+	int habilidade = 6;
 	//Grimorio magias;
 	//Item inventario[10];
 	//Item tesouros[10];

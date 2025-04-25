@@ -75,6 +75,16 @@ void Personagem::addEnergia(int energiaAdicionada)
 	this->energia += energiaAdicionada;
 }
 
+void Personagem::addHabilidade(int energiaAdicionada)
+{
+	this->habilidade += energiaAdicionada;
+}
+
+int Personagem::getHabilidade(){
+	return this->habilidade;
+}
+
+
 void Personagem::addSorte(int sorteAdicionada)
 {
 	this->sorte += sorteAdicionada;
