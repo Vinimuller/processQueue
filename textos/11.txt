@@ -1,0 +1,12 @@
+Você dá de cara com um grande troll das montanhas dentro do calabouço.
+Olhando para trás, todas as portas estão longe demais, é hora da ação!
+
+N: Orc
+M: S
+H: 12
+S: 10
+E: 12
+T: 1000
+P: 1
+I: chave;c;0;0;0
+12;13

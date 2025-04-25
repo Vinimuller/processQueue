@@ -25,6 +25,7 @@ int main() {
         case 1:
             // Nova aventura
             //heroi.criarNovo()
+            //
             break;
         case 2:
             // Carregar aventura 
@@ -37,6 +38,8 @@ int main() {
     }
 
     OrquestradorCenas orquestradorCenas(&heroi);
+    orquestradorCenas.setUltimaCena("1");
+    
     while(true){
         orquestradorCenas.runCena();
         //heroi.save(orquestradorCenas.getUltimaCena());

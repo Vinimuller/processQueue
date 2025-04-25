@@ -61,7 +61,8 @@ void Arquivos::exibirCena(string cenaAtual) {
 
 // Escreve conteúdo em um arquivo
 bool Arquivos::escreverArquivo(const std::string& filename, const std::string& content) {
-    std::ofstream file(filename);
+    string nomeArquivo = "textos/" + filename + ".txt";
+    std::ofstream file(nomeArquivo);
     if (!file.is_open()) {
         std::cerr << "Erro ao abrir arquivo para escrita: " << filename << "\n";
         return false;
@@ -73,7 +74,8 @@ bool Arquivos::escreverArquivo(const std::string& filename, const std::string& c
 
 // Lê conteúdo de um arquivo e retorna como string
 string Arquivos::lerArquivo(const std::string& filename) {
-    std::ifstream file(filename);
+    string nomeArquivo = "textos/" + filename + ".txt";
+    std::ifstream file(nomeArquivo);
     if (!file.is_open()) {
         std::cerr << "Erro ao abrir arquivo para leitura: " << filename << "\n";
         return "";
