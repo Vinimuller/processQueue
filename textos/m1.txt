@@ -1,0 +1,16 @@
+Sala do Calabouco – Luz Vermelha Tremeluzente
+Ao empurrar a pesada porta de pedra, o cheiro de sangue seco e ferro toma conta do ar. A sala é ampla, iluminada por tochas presas a crânios empalados nas paredes. No centro, sobre um estrado rudimentar feito de ossos e pedra, ergue-se uma figura colossal.
+Drogmak, o Despedacador, é um orc de quase três metros de altura, com músculos que parecem esculpidos em pedra viva. Sua pele é de um verde enegrecido, marcada por cicatrizes de batalhas antigas — cada uma contando uma história que ele não se importa em repetir, pois prefere revivê-las. Seus olhos brilham em vermelho sombrio, como brasas alimentadas por ódio ancestral.
+Ele veste uma armadura de placas metálicas corroídas, amassadas em pontos onde espadas já tentaram, e falharam, em atravessá-lo. Em sua mão direita, empunha um machado de duas lâminas, maior que um homem comum, cujos entalhes rúnicos parecem pulsar com energia maligna.
+Com um rosnado grave, ele se vira para você.
+"Mais um inseto que acha que pode desafiar o rei do sangue? Venha, e veja seus ossos se tornarem parte do meu trono."
+
+N: Drogmak
+M: S
+H: 40
+S: 10
+E: 100
+T: 1000
+P: 1
+I: chave;c;0;0;0
+12;13

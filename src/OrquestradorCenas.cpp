@@ -1,6 +1,6 @@
 #include "../inc/classes/OrquestradorCenas.h"
 
-OrquestradorCenas::OrquestradorCenas(Personagem *heroi){
+OrquestradorCenas::OrquestradorCenas(Heroi *heroi){
     this->heroi = heroi;
 }
 
@@ -23,9 +23,7 @@ void OrquestradorCenas::carregarDescricao(string cena){
             descricao += linha + "\n";
         }
     }
-
     cout << descricao << endl;
-
 }
 
 string OrquestradorCenas::lerAtributosDoInimigo(string cena){
@@ -37,18 +35,35 @@ string OrquestradorCenas::lerAtributosDoInimigo(string cena){
             atributos += linha + "\n"; // apenas adiciona a linha à string
         }
     }
+    return atributos;
 }
 
+void OrquestradorCenas::getProximasCenas(string cena){
+    istringstream stream(cena);
+    string ultimaLinhaNumeros;
+    string linha;
+    while (getline(stream, linha)) {
+        if (linha.find(';') != string::npos && linha.find(':') == string::npos) {
+            ultimaLinhaNumeros = linha; // armazena a última que parece ser "NumeroA;NumeroB"
+        }
+    }
 
+    // Extrai os dois números da última linha encontrada
+    if (!ultimaLinhaNumeros.empty()) {
+        size_t pos = ultimaLinhaNumeros.find(';');
+        proximaCenaA = stoi(ultimaLinhaNumeros.substr(0, pos));
+        proximaCenaB = stoi(ultimaLinhaNumeros.substr(pos + 1));
+    }
+}
 
 void OrquestradorCenas::runCena(){
     string cena = arquivo.lerArquivo(this->ultimaCena);
-
-    carregarDescricao(cena);
     
+    carregarDescricao(cena);
+    getProximasCenas(cena);
 
     if(ultimaCena.at(0) == 'm'){
-        Personagem inimigo;
+        Inimigo inimigo;
         inimigo.carregarPersonagem(lerAtributosDoInimigo(cena));
 
         Batalha batalha(heroi, &inimigo);
@@ -57,7 +72,9 @@ void OrquestradorCenas::runCena(){
             cout << "Infelizmente " << heroi->getNome() << " sucumbiu na luta contra " << inimigo.getNome() << "..." << endl;
             cout << "Tente novamente! (reinicie o jogo e vá em carregar)" << endl;
             while(true){}
+            //Modificar para verificar próxima cena
         }
+
         // Cena de batalha
         // print da cena
         // print opções padrao

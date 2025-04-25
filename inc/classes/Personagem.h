@@ -11,7 +11,8 @@ class Personagem {
 public:
 	Personagem();
 
-	void carregarPersonagem(string nomePersonagem = "personagem.txt");
+	virtual void carregarPersonagem(string nomePersonagem = "personagem");
+	//O melhor seria criar uma nova classe apara implementar esse método nos inimigos
 
 	
 	void setNome(string nome);

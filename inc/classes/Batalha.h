@@ -2,23 +2,23 @@
 
 #include "Arquivos.h"
 #include "Tela.h"
-#include "Personagem.h"
+#include "Heroi.h"
+#include "Inimigo.h"
 #include "UserInput.h"
 
 class Batalha {
 public:
-    Batalha(Personagem* heroi, Personagem* inimigo);
+    Batalha(Heroi* heroi, Inimigo* inimigo);
     ~Batalha();
     bool run();
     void exibirOpcoes();
-    int escolhaDoUsuario();
     bool perguntaQuerUtilizarSorte();
 
 
 private:
     Arquivos arquivos;
-    Personagem *heroi;
-    Personagem *inimigo;
+    Heroi *heroi;
+    Inimigo *inimigo;
     UserInput userInput;
 };
 

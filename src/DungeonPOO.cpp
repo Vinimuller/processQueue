@@ -7,12 +7,13 @@
 #include "../inc/classes/Menu.h"
 #include "../inc/classes/Personagem.h"
 #include "../inc/classes/OrquestradorCenas.h"
+#include "../inc/classes/Heroi.h"
 
 Arquivos arquivo;
 UserInput userInput;
 Tela tela;
 Menu menu;
-Personagem heroi;
+Heroi heroi;
 
 int main() {
 
@@ -38,11 +39,11 @@ int main() {
     }
 
     OrquestradorCenas orquestradorCenas(&heroi);
-    orquestradorCenas.setUltimaCena("1");
-    
+    orquestradorCenas.setUltimaCena("m1");
+
     while(true){
         orquestradorCenas.runCena();
-        //heroi.save(orquestradorCenas.getUltimaCena());
+        heroi.save(orquestradorCenas.getUltimaCena());
     }
     return 0;
 }
