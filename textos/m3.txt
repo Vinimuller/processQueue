@@ -2,7 +2,7 @@ A criatura é imensa, coberta por placas de carapaça escura e olhos que brilham
 
 N: Guardião da Chave
 M: S
-H: 14
+H: 10
 S: 12
 E: 16
 T: 1300

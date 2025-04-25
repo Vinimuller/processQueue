@@ -1,4 +1,4 @@
-#include "Item.h"
+#include "../inc/classes/Item.h"
 
 Item::Item(string nome, char tipo, int combate, int FA, int dano) : nome(nome), tipo(tipo), combate(combate), FA(FA), dano(dano){}
 Item::Item(){}

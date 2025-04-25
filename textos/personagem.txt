@@ -1,6 +1,6 @@
-N: jaja
-H: 6
-S: 6
-E: 24
+N: Jorgao tunado
+H: 12
+S: 4
+E: 16
 P: 0
-C: m3
+C: m2
