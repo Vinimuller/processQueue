@@ -1,6 +1,7 @@
-Cena 6: A Ponte sobre o Abismo
-Uma ponte de corda suspensa sobre um vazio. Algo a balança violentamente.
-Ação: Correr, atravessar com calma, ou procurar outro caminho.
+Um pedestal de pedra repousa no centro da sala. Sobre ele, uma garrafa de vidro envolta em névoa. A poção cintila com uma cor azul intensa.
 
-Evento possível: Um Gárgula Alada ataca no meio da travessia.
-Recompensa: Botas do Equilíbrio (permite evitar armadilhas de chão).
+I: poção;andar1p1;0;0;0
+>1: Beber a poção
+>2: Guardar para depois
+
+12;13

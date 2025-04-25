@@ -1,0 +1,13 @@
+Um grunhido gutural ressoa antes que você possa reagir. Uma criatura grotesca salta da escuridão, armada com garras feitas de osso e olhos inflamados de fúria. Você desembainha sua arma, pronto para o combate.
+
+N: Goblin Sombrio
+M: S
+H: 9
+S: 6
+E: 8
+T: 700
+P: 0
+I: combate;mob1;0;0;0
+9;11
+
+4;5

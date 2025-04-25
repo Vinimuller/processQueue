@@ -95,8 +95,8 @@ void OrquestradorCenas::runCena(){
             ultimaCena = proximaCenaA;
         } else {
             ultimaCena = proximaCenaB;
-            
         }
+        heroi->setUltimaCena(ultimaCena);
         clearTheTerminal();
         // Cena de escolha ou interação
         // print da cena

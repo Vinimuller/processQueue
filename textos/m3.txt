@@ -1,0 +1,13 @@
+A criatura é imensa, coberta por placas de carapaça escura e olhos que brilham em vermelho. Ao seu redor, ossos destroçados e armas quebradas decoram o ambiente como um mórbido aviso. Com um rugido, o mini boss avança, e você sabe que precisará dar tudo de si.
+
+N: Guardião da Chave
+M: S
+H: 14
+S: 12
+E: 16
+T: 1300
+P: 1
+I: chave;miniBoss;0;0;0
+13;14
+
+6;7

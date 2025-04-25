@@ -1,6 +1,7 @@
-Cena 7: Sala das Armadilhas
-Paredes se movem. Lâminas surgem do chão. Um desafio de reflexos.
-Ação: Rolar destreza, usar ferramentas ou invocar magia.
+Você encontra uma poção esverdeada em um canto empoeirado. Ela emite um leve calor ao toque.
 
-Evento possível: Dano por falha ou acesso direto a sala do tesouro.
-Recompensa: Elmo dos Reflexos (+2 Destreza).
+I: poção;andar1p2;0;0;0
+>1: Consumir a poção
+>2: Armazenar no inventário
+
+4;m5

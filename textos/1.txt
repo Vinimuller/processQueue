@@ -1,8 +1,8 @@
-Cena 1: A Entrada de Pedra
-Você chega ao portão da dungeon. Ele se abre sozinho com um estrondo surdo. Musgo cobre as paredes e o ar cheira a metal oxidado.
-Ação: Entrar ou acampar para se preparar.
+Você cruza o limiar da dungeon e a escuridão engole a luz por completo. O chão está coberto por musgo escorregadio e o ar tem um cheiro metálico que gruda nas narinas. À frente, uma sala circular com duas saídas visíveis. Ecos distantes sugerem movimentações... algo se esgueira pelas sombras.
 
-> 1 - Pergar item
-> 2 - Seguir
+>1: Verificar a porta à esquerda
+>2: Seguir pela porta central
 
-2;3 
+I: chave;salaentrada;0;0;0
+
+m2;m3

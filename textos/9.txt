@@ -1,6 +1,7 @@
-Cena 9: Câmara do Guardião
-O chão treme. O Guardião de Thal'Zul, um golem colosso, bloqueia o caminho final.
-Ação: Batalhar, fugir ou tentar convencê-lo com uma relíquia.
+Você encontra uma passagem escondida atrás de uma parede falsa. O ar frio sopra de dentro da escadaria.
 
-Evento possível: Batalha épica.
-Recompensa: Chave do Coração da Dungeon.
+I: escada;secreta;0;0;0
+>1: Descer com cautela
+>2: Voltar e explorar mais do andar 1
+
+12;13

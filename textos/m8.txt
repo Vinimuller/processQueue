@@ -1,0 +1,13 @@
+Um monstro protetor se ergue diante de uma porta trancada. Ele segura uma corrente com uma fechadura mágica.
+
+N: Guardião da Fechadura
+M: S
+H: 10
+S: 8
+E: 10
+T: 900
+P: 0
+I: fechadura;mobfechadura;0;0;0
+10;12
+
+10;11

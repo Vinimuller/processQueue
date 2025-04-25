@@ -1,0 +1,7 @@
+No centro da sala, três crianças encolhidas olham para você com olhos assustados. Elas apontam para um símbolo no chão.
+
+I: sala;criancas;0;0;0
+>1: Acalmar as crianças
+>2: Investigar o símbolo
+
+8;9

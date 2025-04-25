@@ -1,0 +1,13 @@
+A sala é enorme, repleta de colunas quebradas e vitrais negros que parecem observar seus movimentos. Do trono de pedra ergue-se uma figura encapuzada, envolta por energia roxa pulsante. Ao seu comando, o chão treme. Você engole seco — chegou a hora do confronto final.
+
+N: Lorde das Correntes
+M: S
+H: 18
+S: 14
+E: 20
+T: 1800
+P: 2
+I: chave;bigbadboss;0;0;0
+16;19
+
+10;11

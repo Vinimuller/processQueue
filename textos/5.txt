@@ -1,6 +1,0 @@
-Cena 5: Biblioteca Perdida
-Livros flutuam no ar. Uma voz sussurra: "Conhecimento tem preço."
-Ação: Ler um grimório antigo, procurar um feitiço útil.
-
-Evento possível: Aprender uma nova magia ou invocar uma criatura indesejada.
-Recompensa: Magia “Explosão Etérea” ou tomo de +1 inteligência.

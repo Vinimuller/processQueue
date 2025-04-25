@@ -1,6 +1,7 @@
-Cena 4: O Poço do Sacrifício
-Uma sala com um poço negro no centro. Um altar pede "sangue voluntário".
-Ação: Oferecer HP, um item, ou ignorar.
+Em meio a destroços, você encontra um armário enferrujado. Dentro, há uma pequena coleção de equipamentos antigos, mas ainda úteis. Uma espada rústica e uma poção avermelhada.
 
-Evento possível: Ao sacrificar algo, abre-se uma passagem secreta.
-Recompensa: Daga Vampírica (cura parte do dano causado).
+I: loot;equipamento2;0;0;0
+>1: Pegar tudo
+>2: Usar a poção agora
+
+m8;m11

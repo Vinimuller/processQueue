@@ -24,29 +24,28 @@ int main() {
         // 1 -> Nova Aventura
         // 2 -> Carregar Aventura
     
+        OrquestradorCenas orquestradorCenas(&heroi);
 
     switch(menu.run()){
         case 1:
             // Nova aventura
             //heroi.criarNovo()
-            //
+            orquestradorCenas.setUltimaCena("1");
             break;
         case 2:
             // Carregar aventura 
             // Falta implementar o inventario
             heroi.carregarPersonagem();
+            orquestradorCenas.setUltimaCena(heroi.getUltimaCena());
             break;
         default:
             return 0;
             break;
     }
 
-    OrquestradorCenas orquestradorCenas(&heroi);
-    orquestradorCenas.setUltimaCena("1");
-
     while(true){
         orquestradorCenas.runCena();
-        heroi.save(orquestradorCenas.getUltimaCena());
+        heroi.save();
     }
     return 0;
 }
