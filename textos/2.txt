@@ -11,5 +11,3 @@ Escolha sua ação:
 2 -> Fugir
 3 -> Resolver Enigma
 0 -> Abandonar jogo
-
->> 

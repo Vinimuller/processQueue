@@ -26,7 +26,7 @@ void OrquestradorCenas::carregarDescricao(string cena){
     string descricao;
     string linha;
     while(getline(stream, linha)){
-        if(linha.rfind("N:", 0) == 0 || linha.rfind("I:", 0) == 0 || linha.empty()){
+        if(linha.rfind("N:", 0) == 0 || linha.rfind("I:", 0) == 0 || isdigit(linha[0])){
             break;
         } else {
             descricao += linha + "\n";
@@ -60,8 +60,8 @@ void OrquestradorCenas::getProximasCenas(string cena){
     // Extrai os dois números da última linha encontrada
     if (!ultimaLinhaNumeros.empty()) {
         size_t pos = ultimaLinhaNumeros.find(';');
-        proximaCenaA = stoi(ultimaLinhaNumeros.substr(0, pos));
-        proximaCenaB = stoi(ultimaLinhaNumeros.substr(pos + 1));
+        proximaCenaA = ultimaLinhaNumeros.substr(0, pos);
+        proximaCenaB = ultimaLinhaNumeros.substr(pos + 1);
     }
 }
 
@@ -91,13 +91,11 @@ void OrquestradorCenas::runCena(){
         // print opções padrao
         // espera resposta de usuário
     } else {
-        bool escolhaFeitaEValida = false;
-        while(escolhaFeitaEValida == false){
-            if(userInput.rangedReadNumber(1,2) == 1){
-                ultimaCena = proximaCenaA;
-            } else {
-                ultimaCena = proximaCenaB;
-            }
+        if(userInput.rangedReadNumber(1,2) == 1){
+            ultimaCena = proximaCenaA;
+        } else {
+            ultimaCena = proximaCenaB;
+            
         }
         clearTheTerminal();
         // Cena de escolha ou interação
