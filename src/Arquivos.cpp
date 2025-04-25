@@ -1,10 +1,12 @@
 #include "../inc/classes/Arquivos.h"
 
 void Arquivos::apagarArquivo(const std::string& filename){
-    if (remove(filename.c_str()) != 0) {
-        cerr << "Erro ao apagar o arquivo: " << filename << "\n";
+    std::string nomeArquivo = "textos/" + filename + ".txt";
+
+    if (remove(nomeArquivo.c_str()) != 0) {
+        cerr << "Erro ao apagar o arquivo: " << nomeArquivo << "\n";
     } else {
-        cout << "Arquivo apagado com sucesso: " << filename << "\n";
+        cout << "Arquivo apagado com sucesso: " << nomeArquivo << "\n";
     }
 }
 

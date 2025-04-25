@@ -7,9 +7,9 @@ Com um rosnado grave, ele se vira para você.
 
 N: Drogmak
 M: S
-H: 40
+H: 1
 S: 10
-E: 100
+E: 1
 T: 1000
 P: 1
 I: chave;c;0;0;0

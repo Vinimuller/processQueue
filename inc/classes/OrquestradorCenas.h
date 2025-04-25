@@ -27,6 +27,8 @@ private:
     string lerAtributosDoInimigo(string cena);
     void carregarDescricao(string cena);
     void getProximasCenas(string cena);
+    void clearTheTerminal();
+
 
     string proximaCenaSucesso;
     string proximaCenaFracaso;

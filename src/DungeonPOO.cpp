@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <locale>
 
 #include "../inc/classes/Arquivos.h"
 #include "../inc/classes/UserInput.h"
@@ -9,6 +10,8 @@
 #include "../inc/classes/OrquestradorCenas.h"
 #include "../inc/classes/Heroi.h"
 
+using namespace std;
+
 Arquivos arquivo;
 UserInput userInput;
 Tela tela;
@@ -16,7 +19,7 @@ Menu menu;
 Heroi heroi;
 
 int main() {
-
+    setlocale(LC_ALL, "pt_BR.UTF-8"); // usa o locale do sistema
     //Tela de Menu
         // 1 -> Nova Aventura
         // 2 -> Carregar Aventura
@@ -39,7 +42,7 @@ int main() {
     }
 
     OrquestradorCenas orquestradorCenas(&heroi);
-    orquestradorCenas.setUltimaCena("m1");
+    orquestradorCenas.setUltimaCena("1");
 
     while(true){
         orquestradorCenas.runCena();

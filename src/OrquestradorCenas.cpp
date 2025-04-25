@@ -12,6 +12,15 @@ void OrquestradorCenas::setUltimaCena(string ultimaCena){
     this->ultimaCena = ultimaCena;
 }
 
+void OrquestradorCenas::clearTheTerminal(){
+    #ifdef _WIN32
+    system("cls"); // For Windows
+    #else
+        system("clear"); // For Unix-like systems (Linux, macOS)
+    #endif
+
+}
+
 void OrquestradorCenas::carregarDescricao(string cena){
     istringstream stream(cena);
     string descricao;
@@ -73,8 +82,10 @@ void OrquestradorCenas::runCena(){
             cout << "Tente novamente! (reinicie o jogo e vá em carregar)" << endl;
             while(true){}
             //Modificar para verificar próxima cena
+        } else {
+            ultimaCena = proximaCenaA;
         }
-
+        clearTheTerminal();
         // Cena de batalha
         // print da cena
         // print opções padrao
@@ -82,12 +93,16 @@ void OrquestradorCenas::runCena(){
     } else {
         bool escolhaFeitaEValida = false;
         while(escolhaFeitaEValida == false){
-
+            if(userInput.rangedReadNumber(1,2) == 1){
+                ultimaCena = proximaCenaA;
+            } else {
+                ultimaCena = proximaCenaB;
+            }
         }
+        clearTheTerminal();
         // Cena de escolha ou interação
         // print da cena
         // print das opções descritas na cena
         // espera resposta de usuário
     }
-    
 }
