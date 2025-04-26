@@ -1,6 +1,7 @@
-N: Jorgao tunado
-H: 12
-S: 4
-E: 16
+N: Gabrieru
+H: 10
+S: 10
+E: 8
 P: 0
 C: m2
+Espada Larga;A;1;1;40;

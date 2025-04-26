@@ -8,8 +8,8 @@ public:
     ~Tela();
     void exibirConteudoPrincipal(string nomeDoArquivo);
     void exibirConteudoPrincipal(int nomeDoArquivo);
+    void limpaTerminal();
 
-    void recebeInputDoJogador();
 private:
     Arquivos arquivos;
 };

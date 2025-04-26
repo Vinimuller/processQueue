@@ -46,6 +46,10 @@ int main() {
             break;
     }
 
+    Item EspadaLarga("Espada Larga", "A", 1, 1, 40);
+
+    heroi.adicionarItemAoInventario(EspadaLarga);
+
     while(true){
         orquestradorCenas.runCena();
         heroi.save();

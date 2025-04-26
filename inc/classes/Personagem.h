@@ -5,6 +5,10 @@
 #include <map>
 #include <sstream>
 #include "Arquivos.h"
+#include "Item.h"
+#include "Inventario.h"
+#include "Tela.h"
+
 using namespace std;
 
 class Personagem {
@@ -42,6 +46,12 @@ public:
 	int testeDeAtaque(bool usarSorte);
 	int usarSorte();
 
+	void mostrarInventario();
+    void adicionarItemAoInventario(string& item);
+    void adicionarItemAoInventario(Item& item);
+    void equiparItem(string& nome);
+    void usarItem(string& nome);
+
 protected:
 	string nome;
 	int energia = 12;
@@ -54,6 +64,8 @@ protected:
 	int energiaRecuperadaPorProvisao = 4;
 
 	Arquivos arquivo;
+	Inventario inventario;
+	Tela tela;
 };
 
 #endif

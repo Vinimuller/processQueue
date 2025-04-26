@@ -1,0 +1,5 @@
+nome;tipo;combate;FA;dano
+
+I: chaveEscadaSecreta;chave;0;0;0
+
+I: 

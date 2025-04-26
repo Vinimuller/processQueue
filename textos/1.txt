@@ -3,6 +3,4 @@ Você cruza o limiar da dungeon e a escuridão engole a luz por completo. O chã
 >1: Verificar a porta à esquerda
 >2: Seguir pela porta central
 
-I: chave;salaentrada;0;0;0
-
 m2;m3

@@ -15,5 +15,6 @@ public:
     
     bool save();
 private:
+    string gerarSaveInventario();
     string ultimaCena;
 };

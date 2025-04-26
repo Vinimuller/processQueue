@@ -23,6 +23,25 @@ bool Batalha::perguntaQuerUtilizarSorte(){
     return false;
 }
 
+void Batalha::mostrarStatus(Heroi *heroi, Inimigo *inimigo){
+    cout << endl;
+    cout << inimigo->getNome() << endl;
+    cout << "Energia: ";
+    for(int i = 0; i < inimigo->getEnergia(); i++){
+        cout << "#";
+    }
+
+    cout << "\n\n";
+    cout << heroi->getNome() << endl;
+    cout << "Energia: ";
+    for(int i = 0; i < heroi->getEnergia(); i++){
+        cout << "#";
+    }
+    cout << endl;
+    cout << endl;
+
+}
+
 bool Batalha::run(){
     bool batalhaFinalizada = false;
 
@@ -30,6 +49,7 @@ bool Batalha::run(){
         //Inicia turno
         bool usuarioFezEscolha = false;
         while (usuarioFezEscolha == false){
+            mostrarStatus(heroi, inimigo);
             exibirOpcoes();
             switch (userInput.rangedReadNumber(1, 2))
             {
@@ -56,7 +76,7 @@ bool Batalha::run(){
                 }
                 break;
             case 2:
-                //heroi.acessaInventario();
+                heroi->mostrarInventario();
                 break;
             default:
                 break;

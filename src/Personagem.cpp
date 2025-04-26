@@ -26,7 +26,7 @@ void Personagem::carregarPersonagem(string nomePersonagem)
 	this->energia = stoi(atributos['E']);
 	this->quantidadeDeProvisoes = stoi(atributos['P']);
 	
-	cout << "Personagem carregado: " << this->nome << endl;
+	//cout << "Personagem carregado: " << this->nome << endl;
 }
 
 
@@ -155,4 +155,51 @@ int Personagem::usarSorte() {
 	}
 	sorte--;
 	return resultado;
+}
+
+void Personagem::mostrarInventario(){
+	
+    cout << "Inventário de " << nome << ":" << endl;
+	inventario.listarItens();
+}
+
+void Personagem::adicionarItemAoInventario(string& item) {
+	Item novoItem;
+
+	stringstream ss(item);
+	string campo;
+
+	// Primeiro campo: Nome
+	getline(ss, campo, ';');
+	novoItem.setNome(campo);
+
+	// Segundo campo: Tipo
+	std::getline(ss, campo, ';');
+	novoItem.setTipo(campo);
+
+	// Terceiro campo: Combate
+	std::getline(ss, campo, ';');
+	novoItem.setCombate(std::stoi(campo)); // converte string para int
+
+	// Quarto campo: FA
+	std::getline(ss, campo, ';');
+	novoItem.setFA(std::stoi(campo));
+
+	// Quinto campo: Dano
+	std::getline(ss, campo, ';');
+	novoItem.setDano(std::stoi(campo));
+	
+    inventario.adicionarItem(novoItem);
+}
+
+void Personagem::adicionarItemAoInventario(Item& item) {
+   inventario.adicionarItem(item);
+}
+
+void Personagem::equiparItem(string& nome) {
+    inventario.equiparItem(nome);
+}
+
+void Personagem::usarItem(string& nome) {
+    inventario.usarItem(nome);
 }

@@ -20,5 +20,7 @@ private:
     Heroi *heroi;
     Inimigo *inimigo;
     UserInput userInput;
+    void mostrarStatus(Heroi *heroi, Inimigo *inimigo);
+
 };
 

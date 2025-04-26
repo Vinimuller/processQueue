@@ -13,4 +13,10 @@ void Tela::exibirConteudoPrincipal(int nomeDoArquivo){
     
 };
 
-void Tela::recebeInputDoJogador(){};
+void Tela::limpaTerminal(){
+    #ifdef _WIN32
+        system("cls"); // For Windows
+    #else
+        system("clear"); // For Unix-like systems (Linux, macOS)
+    #endif
+}

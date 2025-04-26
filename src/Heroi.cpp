@@ -11,8 +11,6 @@ string Heroi::getUltimaCena(){
     return this->ultimaCena;
 }
 
-
-
 bool Heroi::save(){
 	string newSave;
 	newSave += "N: ";
@@ -42,6 +40,8 @@ bool Heroi::save(){
 	newSave += "C: ";
 	newSave += this->ultimaCena;
 	newSave += "\n";
+
+	newSave += inventario.getListaDeItens();
 
 	arquivo.apagarArquivo("personagem");
 
@@ -76,5 +76,5 @@ void Heroi::carregarPersonagem(string nomePersonagem)
 	this->ultimaCena = atributos['C'];
 	this->quantidadeDeProvisoes = stoi(atributos['P']);
 	
-	cout << "Personagem carregado: " << this->nome << endl;
+	//cout << "Personagem carregado: " << this->nome << endl;
 }

@@ -1,33 +1,37 @@
+// Item.h
 #ifndef ITEM_H
 #define ITEM_H
 
 #include <string>
+
 using namespace std;
 
 class Item {
-
 public:
-    Item(string nome, char tipo, int combate, int FA, int dano);
-    Item();
+    // Construtores
+    Item(std::string nome, string tipo, int combate, int FA, int dano);
+    Item();  // Construtor padr�o
 
-    string getNome();
-    char getTipo();
+    // M�todos getters
+    std::string getNome();
+    string getTipo();
     int getCombate();
     int getFA();
     int getDano();
 
-    void setNome(string nome);
-    void setTipo(char tipo);
+    // M�todos setters
+    void setNome(std::string nome);
+    void setTipo(string tipo);
     void setCombate(int combate);
     void setFA(int FA);
-    void setDano(int Dano);
+    void setDano(int dano);
 
 protected:
-    string nome;
-    char tipo; 
-    int combate;
-    int FA;
-    int dano;
+    std::string nome;
+    string tipo;  // Tipo do item (Ex: 'A' para arma, 'P' para po��o, etc)
+    int combate; // Pode ser valor associado a dano ou defesa
+    int FA;  // For�a de Ataque (FA)
+    int dano;  // Dano do item
 };
 
-#endif
+#endif // ITEM_H

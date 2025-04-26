@@ -24,5 +24,5 @@ void Inimigo::carregarPersonagem(string atributosInimigo){
 	this->energia = stoi(atributos['E']);
 	this->quantidadeDeProvisoes = stoi(atributos['P']);
 	
-	cout << "Personagem carregado: " << this->nome << endl;
+	//cout << "Personagem carregado: " << this->nome << endl;
 }

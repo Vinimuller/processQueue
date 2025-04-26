@@ -1,13 +1,17 @@
+// Item.cpp
 #include "../inc/classes/Item.h"
 
-Item::Item(string nome, char tipo, int combate, int FA, int dano) : nome(nome), tipo(tipo), combate(combate), FA(FA), dano(dano){}
-Item::Item(){}
+Item::Item(std::string nome, string tipo, int combate, int FA, int dano)
+    : nome(nome), tipo(tipo), combate(combate), FA(FA), dano(dano) {
+}
+
+Item::Item() : nome(""), tipo(""), combate(0), FA(0), dano(0) {}
 
 string Item::getNome() {
     return nome;
 }
 
-char Item::getTipo() {
+string Item::getTipo() {
     return tipo;
 }
 
@@ -23,11 +27,11 @@ int Item::getDano() {
     return dano;
 }
 
-void Item::setNome(string nome) {
+void Item::setNome(std::string nome) {
     this->nome = nome;
 }
 
-void Item::setTipo(char tipo) {
+void Item::setTipo(string tipo) {
     this->tipo = tipo;
 }
 
