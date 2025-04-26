@@ -65,6 +65,8 @@ void OrquestradorCenas::getProximasCenas(string cena){
     }
 }
 
+string OrquestradorCenas::getItensDaCena
+
 void OrquestradorCenas::runCena(){
     string cena = arquivo.lerArquivo(this->ultimaCena);
     

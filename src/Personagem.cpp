@@ -163,7 +163,7 @@ void Personagem::mostrarInventario(){
 	inventario.listarItens();
 }
 
-void Personagem::adicionarItemAoInventario(string& item) {
+void Personagem::adicionarItemAoInventario(string item) {
 	Item novoItem;
 
 	stringstream ss(item);
@@ -174,20 +174,20 @@ void Personagem::adicionarItemAoInventario(string& item) {
 	novoItem.setNome(campo);
 
 	// Segundo campo: Tipo
-	std::getline(ss, campo, ';');
+	getline(ss, campo, ';');
 	novoItem.setTipo(campo);
 
 	// Terceiro campo: Combate
-	std::getline(ss, campo, ';');
-	novoItem.setCombate(std::stoi(campo)); // converte string para int
+	getline(ss, campo, ';');
+	novoItem.setCombate(stoi(campo)); // converte string para int
 
 	// Quarto campo: FA
-	std::getline(ss, campo, ';');
-	novoItem.setFA(std::stoi(campo));
+	getline(ss, campo, ';');
+	novoItem.setFA(stoi(campo));
 
 	// Quinto campo: Dano
-	std::getline(ss, campo, ';');
-	novoItem.setDano(std::stoi(campo));
+	getline(ss, campo);
+	novoItem.setDano(stoi(campo));
 	
     inventario.adicionarItem(novoItem);
 }

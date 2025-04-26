@@ -24,6 +24,8 @@ private:
     Arquivos arquivo;
     UserInput userInput;
 
+    string itensDaCena[5];
+
     string lerAtributosDoInimigo(string cena);
     void carregarDescricao(string cena);
     void getProximasCenas(string cena);

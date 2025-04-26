@@ -47,7 +47,7 @@ public:
 	int usarSorte();
 
 	void mostrarInventario();
-    void adicionarItemAoInventario(string& item);
+    void adicionarItemAoInventario(string item);
     void adicionarItemAoInventario(Item& item);
     void equiparItem(string& nome);
     void usarItem(string& nome);
