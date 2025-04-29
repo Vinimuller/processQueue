@@ -176,18 +176,25 @@ void Personagem::adicionarItemAoInventario(string item) {
 	// Segundo campo: Tipo
 	getline(ss, campo, ';');
 	novoItem.setTipo(campo);
+	cout << "aqui -1" << endl;
+
 
 	// Terceiro campo: Combate
 	getline(ss, campo, ';');
 	novoItem.setCombate(stoi(campo)); // converte string para int
+	cout << "aqui 0" << endl;
+
 
 	// Quarto campo: FA
 	getline(ss, campo, ';');
 	novoItem.setFA(stoi(campo));
+	cout << "aqui 1" << endl;
+
 
 	// Quinto campo: Dano
-	getline(ss, campo);
+	getline(ss, campo, '\n');
 	novoItem.setDano(stoi(campo));
+	cout << "aqui 2" << endl;
 	
     inventario.adicionarItem(novoItem);
 }

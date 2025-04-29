@@ -30,7 +30,12 @@ private:
     void carregarDescricao(string cena);
     void getProximasCenas(string cena);
     void clearTheTerminal();
+    void getItensDaCena(string cena);
+    void limparItensDaCena();
+    void printOpcaoDoItem();
+    bool hasItemNaCena(string cena);
 
+    int quantidadeDeItensNaCena = 0;
 
     string proximaCenaSucesso;
     string proximaCenaFracaso;

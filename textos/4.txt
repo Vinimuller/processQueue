@@ -1,6 +1,6 @@
 Em meio a destroços, você encontra um armário enferrujado. Dentro, há uma pequena coleção de equipamentos antigos, mas ainda úteis. Uma espada rústica e uma poção avermelhada.
 
-I: loot;equipamento2;0;0;0
+I:loot;equipamento;0;0;0
 >1: Pegar tudo
 >2: Usar a poção agora
 

@@ -26,8 +26,10 @@ void OrquestradorCenas::carregarDescricao(string cena){
     string descricao;
     string linha;
     while(getline(stream, linha)){
-        if(linha.rfind("N:", 0) == 0 || linha.rfind("I:", 0) == 0 || isdigit(linha[0])){
+        if(linha.rfind("N:", 0) == 0 || linha.rfind("m", 0) == 0){
             break;
+        } else if (linha.rfind("I:", 0) == 0){
+
         } else {
             descricao += linha + "\n";
         }
@@ -62,16 +64,55 @@ void OrquestradorCenas::getProximasCenas(string cena){
         size_t pos = ultimaLinhaNumeros.find(';');
         proximaCenaA = ultimaLinhaNumeros.substr(0, pos);
         proximaCenaB = ultimaLinhaNumeros.substr(pos + 1);
+
     }
 }
 
-string OrquestradorCenas::getItensDaCena
+void OrquestradorCenas::getItensDaCena(string cena){
+    stringstream ss(cena);
+    string linha;
+    quantidadeDeItensNaCena = 0;
+
+    while(getline(ss, linha)){
+        if (linha.rfind("I", 0)){
+            quantidadeDeItensNaCena++;
+            itensDaCena[quantidadeDeItensNaCena] = linha.substr(2);
+            break;
+        }
+    }
+}
+
+
+
+void OrquestradorCenas::limparItensDaCena(){
+    for(int i = 0; i < 5; i++){
+        itensDaCena[i] = "";
+    }
+}
+
+bool OrquestradorCenas::hasItemNaCena(string cena){
+    stringstream ss(cena);
+    string linha;
+
+    while(getline(ss, linha)){
+        if (linha[0] == 'I'){
+            return true;
+        }
+    }
+    return false;
+}
+
+
 
 void OrquestradorCenas::runCena(){
     string cena = arquivo.lerArquivo(this->ultimaCena);
     
     carregarDescricao(cena);
     getProximasCenas(cena);
+    cout << "aqui" << endl;
+    if(hasItemNaCena(cena)) getItensDaCena(cena);
+    cout << "ali" << endl;
+
 
     if(ultimaCena.at(0) == 'm'){
         Inimigo inimigo;
@@ -93,13 +134,28 @@ void OrquestradorCenas::runCena(){
         // print opções padrao
         // espera resposta de usuário
     } else {
-        if(userInput.rangedReadNumber(1,2) == 1){
-            ultimaCena = proximaCenaA;
-        } else {
-            ultimaCena = proximaCenaB;
+        bool cenaCompleta = false;
+        while(cenaCompleta == false){
+            int maximoDeOpcoes = hasItemNaCena(cena) ? 3 : 2;
+            int opcaoSelecionada = userInput.rangedReadNumber(1, maximoDeOpcoes);
+            if(opcaoSelecionada == maximoDeOpcoes - 1){
+                ultimaCena = proximaCenaA;
+                cenaCompleta = true;
+            } else if(opcaoSelecionada == maximoDeOpcoes){
+                ultimaCena = proximaCenaB;
+                cenaCompleta = true;
+            } else {
+                heroi->adicionarItemAoInventario(itensDaCena[opcaoSelecionada]);
+                cout << itensDaCena[opcaoSelecionada].substr(0, ';') << " adicionado ao inventário de " << heroi->getNome();
+            }
         }
+
+        cout << "add cena" << endl;
+        limparItensDaCena();
+        cout << "add stack" << endl;
         heroi->setUltimaCena(ultimaCena);
         clearTheTerminal();
+        
         // Cena de escolha ou interação
         // print da cena
         // print das opções descritas na cena

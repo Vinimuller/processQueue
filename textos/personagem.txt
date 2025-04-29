@@ -1,7 +1,7 @@
-N: Gabrieru
-H: 10
-S: 10
-E: 8
+N: gerson
+H: 400000
+S: 3
+E: 2
 P: 0
 C: m2
-Espada Larga;A;1;1;40;
+Adaga Meia-Lua;A;1;1;40;
