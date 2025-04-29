@@ -74,7 +74,7 @@ void OrquestradorCenas::getItensDaCena(string cena){
     quantidadeDeItensNaCena = 0;
 
     while(getline(ss, linha)){
-        if (linha.rfind("I", 0)){
+        if (linha.find("I:", 0) == 0){
             quantidadeDeItensNaCena++;
             itensDaCena[quantidadeDeItensNaCena] = linha.substr(2);
             break;
@@ -106,12 +106,9 @@ bool OrquestradorCenas::hasItemNaCena(string cena){
 
 void OrquestradorCenas::runCena(){
     string cena = arquivo.lerArquivo(this->ultimaCena);
-    
     carregarDescricao(cena);
     getProximasCenas(cena);
-    cout << "aqui" << endl;
     if(hasItemNaCena(cena)) getItensDaCena(cena);
-    cout << "ali" << endl;
 
 
     if(ultimaCena.at(0) == 'm'){
@@ -146,13 +143,12 @@ void OrquestradorCenas::runCena(){
                 cenaCompleta = true;
             } else {
                 heroi->adicionarItemAoInventario(itensDaCena[opcaoSelecionada]);
-                cout << itensDaCena[opcaoSelecionada].substr(0, ';') << " adicionado ao inventário de " << heroi->getNome();
+                int posicaoMarcadorNomeDoItem = itensDaCena[opcaoSelecionada].find(';');
+                cout << itensDaCena[opcaoSelecionada].substr(0, posicaoMarcadorNomeDoItem) << " adicionado ao inventário de " << heroi->getNome();
             }
         }
 
-        cout << "add cena" << endl;
         limparItensDaCena();
-        cout << "add stack" << endl;
         heroi->setUltimaCena(ultimaCena);
         clearTheTerminal();
         

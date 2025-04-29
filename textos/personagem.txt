@@ -1,7 +1,9 @@
-N: gerson
-H: 400000
-S: 3
-E: 2
+N: Xleberzon I
+H: 12
+S: 10
+E: 12
 P: 0
-C: m2
+C: m8
 Adaga Meia-Lua;A;1;1;40;
+loot;equipamento;0;0;0;
+loot;equipamento;0;0;0;

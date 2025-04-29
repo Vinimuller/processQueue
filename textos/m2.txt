@@ -2,7 +2,7 @@ Um grunhido gutural ressoa antes que você possa reagir. Uma criatura grotesca s
 
 N: Goblin Sombrio
 M: S
-H: 9
+H: 2
 S: 6
 E: 8
 T: 700
