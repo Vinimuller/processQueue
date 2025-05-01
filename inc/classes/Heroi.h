@@ -12,12 +12,17 @@ public:
 
     void setUltimaCena(string ultimaCena);
     string getUltimaCena();
+    void setMaximoDeEnergia(int maxEnergia);
     bool carregarPersonagem();
     void adicionarResumoDePersonagens();
     string getSavesDisponiveis();
+    void usarProvisao();
+    void getProvisao(int quantidade);
     bool save();
 private:
     string gerarSaveInventario();
     string ultimaCena;
     UserInput userInput;
+
+    int maximoDeEnergia;
 };

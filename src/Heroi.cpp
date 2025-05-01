@@ -150,3 +150,31 @@ bool Heroi::carregarPersonagem()
 
 	return true;
 }
+
+void Heroi::usarProvisao(){
+	if(quantidadeDeProvisoes <= 0){
+		cout << "Não há provisões disponíveis" << endl;
+		return;
+	}else{
+		int novoTotalEnergia = this->energia + this->energiaRecuperadaPorProvisao;
+		if(novoTotalEnergia > this->maximoDeEnergia){
+			this->setEnergia(maximoDeEnergia);
+		} else {
+			this->setEnergia(novoTotalEnergia);
+		}
+		cout << this->getNome() << " recuperou " << energiaRecuperadaPorProvisao << " pontos de energia!" << endl;
+		quantidadeDeProvisoes--;
+	}
+	return;
+}
+
+void Heroi::setMaximoDeEnergia(int maxEnergia){
+
+	this->maximoDeEnergia = maxEnergia;
+
+}
+
+void Heroi::getProvisao(int quantidade){
+	this->addProvisao(quantidade);
+	cout << "Você encontra provisões! (" << quantidade << ")" << endl;	
+}

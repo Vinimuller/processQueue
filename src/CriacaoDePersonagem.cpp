@@ -71,7 +71,10 @@ void CriacaoDePersonagem::run(Heroi *heroi) {
     }
     if(pontosParaDistribuir == 0){
         distribuicaoDePontosFinalizada = true;
-    }    
+    }
+    
+    heroi->setMaximoDeEnergia(heroi->getEnergia());
+    
     }
     std::cout << "Herói criado com sucesso!" << endl;
 

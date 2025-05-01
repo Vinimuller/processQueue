@@ -31,6 +31,7 @@ private:
     void getProximasCenas(string cena);
     void clearTheTerminal();
     void getItensDaCena(string cena);
+    void getProvisaoDaCena(string cena);
     void limparItensDaCena();
     void printOpcaoDoItem();
     bool hasItemNaCena(string cena);

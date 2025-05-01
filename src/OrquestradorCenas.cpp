@@ -28,7 +28,7 @@ void OrquestradorCenas::carregarDescricao(string cena){
     while(getline(stream, linha)){
         if(linha.rfind("N:", 0) == 0 || linha.rfind("m", 0) == 0){
             break;
-        } else if (linha.rfind("I:", 0) == 0){
+        } else if (linha.rfind("I:", 0) == 0 || linha.rfind("P:", 0) == 0){
 
         } else {
             descricao += linha + "\n";
@@ -102,14 +102,28 @@ bool OrquestradorCenas::hasItemNaCena(string cena){
     return false;
 }
 
+void OrquestradorCenas::getProvisaoDaCena(string cena){
+    stringstream ss(cena);
+    string linha;
+
+    while(getline(ss, linha)){
+        if (linha.rfind("P", 0) == 0){
+            heroi->getProvisao(stoi(linha.substr(2, 1)));
+            return;
+        }
+    }
+    cout << "Não encontrou provisões";
+    return;
+}
+
 
 
 void OrquestradorCenas::runCena(){
     string cena = arquivo.lerArquivo(this->ultimaCena);
     carregarDescricao(cena);
+    getProvisaoDaCena(cena);
     getProximasCenas(cena);
     if(hasItemNaCena(cena)) getItensDaCena(cena);
-
 
     if(ultimaCena.at(0) == 'm'){
         Inimigo inimigo;
@@ -133,9 +147,11 @@ void OrquestradorCenas::runCena(){
     } else {
         bool cenaCompleta = false;
         while(cenaCompleta == false){
-            int maximoDeOpcoes = hasItemNaCena(cena) ? 3 : 2;
+            int maximoDeOpcoes = hasItemNaCena(cena) ? 4 : 3;
             int opcaoSelecionada = userInput.rangedReadNumber(1, maximoDeOpcoes);
-            if(opcaoSelecionada == maximoDeOpcoes - 1){
+            if(opcaoSelecionada == maximoDeOpcoes - 2){
+                heroi->usarProvisao();
+            } else if(opcaoSelecionada == maximoDeOpcoes - 1){
                 ultimaCena = proximaCenaA;
                 cenaCompleta = true;
             } else if(opcaoSelecionada == maximoDeOpcoes){
