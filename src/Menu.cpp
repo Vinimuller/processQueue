@@ -6,14 +6,6 @@ Menu::~Menu(){}
 
 int Menu::run(){
     arquivos.exibirCena("menu");
-    int input = userInput.readNumber();
-    if(input == novaAventura){
-        return 1;
-    } else if (input == carregarAventura){
-        return 2;
-    }
-    else{
-        return run();
-    }
-    return 0;
+    int input = userInput.rangedReadNumber(1,3);
+    return input;
 }

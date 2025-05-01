@@ -1,9 +1,7 @@
 N: Xleberzon I
 H: 12
-S: 10
-E: 12
+S: 7
+E: 5
 P: 0
 C: m8
 Adaga Meia-Lua;A;1;1;40;
-loot;equipamento;0;0;0;
-loot;equipamento;0;0;0;
