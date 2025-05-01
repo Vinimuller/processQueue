@@ -107,12 +107,14 @@ void OrquestradorCenas::getProvisaoDaCena(string cena){
     string linha;
 
     while(getline(ss, linha)){
-        if (linha.rfind("P", 0) == 0){
-            heroi->getProvisao(stoi(linha.substr(2, 1)));
+        if (linha.rfind("P:", 0) == 0){
+            if(stoi(linha.substr(3, 1)) == 0){
+                return;
+            }
+            heroi->getProvisao(stoi(linha.substr(3, 1)));
             return;
         }
     }
-    cout << "Não encontrou provisões";
     return;
 }
 
@@ -121,12 +123,18 @@ void OrquestradorCenas::getProvisaoDaCena(string cena){
 void OrquestradorCenas::runCena(){
     string cena = arquivo.lerArquivo(this->ultimaCena);
     carregarDescricao(cena);
+    cout << "FLAG 1" << endl;
+
     getProvisaoDaCena(cena);
+    cout << "FLAG 2" << endl;
+
     getProximasCenas(cena);
+
     if(hasItemNaCena(cena)) getItensDaCena(cena);
 
     if(ultimaCena.at(0) == 'm'){
         Inimigo inimigo;
+
         inimigo.carregarPersonagem(lerAtributosDoInimigo(cena));
 
         Batalha batalha(heroi, &inimigo);

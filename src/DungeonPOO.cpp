@@ -49,7 +49,6 @@ int main() {
             break;
     }
 
-    heroi.adicionarItemAoInventario("Adaga Meia-Lua;A;1;1;40");
 
     while(true){
         orquestradorCenas.runCena();

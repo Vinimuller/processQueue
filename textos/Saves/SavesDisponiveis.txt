@@ -1,11 +1,1 @@
-Nome:nobel|  Habilidade:12|  Sorte:10|  Energia:12|  Provisões:0|
-Nome:Morcegao|  Habilidade:12|  Sorte:9|  Energia:15|  Provisões:0|Nome:Morcegao|  Habilidade:12|  Sorte:5|  Energia:13|  Provisões:0|  
-Nome:Morcegao|  Habilidade:12|  Sorte:5|  Energia:13|  Provisões:0|  
-Nome:Morcegao|  Habilidade:12|  Sorte:3|  Energia:4|  Provisões:0|  
-Nome:Morcegao|  Habilidade:12|  Sorte:3|  Energia:4|  Provisões:0|  
-Nome:Morcegao|  Habilidade:12|  Sorte:2|  Energia:4|  Provisões:0|  
-Nome:Morcegao|  Habilidade:12|  Sorte:2|  Energia:4|  Provisões:0|  
-Nome:nobel|  Habilidade:12|  Sorte:9|  Energia:12|  Provisões:0|  
-Nome:nobel|  Habilidade:12|  Sorte:9|  Energia:12|  Provisões:0|  
-Nome:nobel|  Habilidade:12|  Sorte:7|  Energia:5|  Provisões:0|  
-Nome:Cajamar|  Habilidade:12|  Sorte:6|  Energia:18|  Provisões:0|  
+Nome:hahav|  Habilidade:6|  Sorte:6|  Energia:24|  Provisões:2|  

@@ -49,6 +49,7 @@ bool Batalha::run(){
         //Inicia turno
         bool usuarioFezEscolha = false;
         while (usuarioFezEscolha == false){
+            cout << "FLAG 2" << endl;
             mostrarStatus(heroi, inimigo);
             exibirOpcoes();
             switch (userInput.rangedReadNumber(1, 2))

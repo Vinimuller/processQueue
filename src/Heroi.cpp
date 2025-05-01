@@ -57,6 +57,7 @@ bool Heroi::save(){
 void Heroi::adicionarResumoDePersonagens(){
 	
 	string arquivoResumoPersonagens = arquivo.lerArquivo("Saves/savesDisponiveis");
+	string novoResumoPersonagens;
 
 	arquivo.exibirCena("Saves/savesDisponiveis");
 
@@ -64,8 +65,10 @@ void Heroi::adicionarResumoDePersonagens(){
 	string linha;
 	
 	while(getline(ss, linha)){
-		if(linha.find(this->nome) == 0){
-			linha.erase();
+		if(linha.find(this->nome) != 0){
+			novoResumoPersonagens += linha;
+			novoResumoPersonagens += "\n";
+
 		}
 	}
 	
@@ -78,9 +81,11 @@ void Heroi::adicionarResumoDePersonagens(){
 	resumoPersonagem += "\n";
 	//resumoPersonagem += "T:"; resumoPersonagem += this->tesouro; resumoPersonagem += ";  ";
 
-	arquivoResumoPersonagens += resumoPersonagem;
+	novoResumoPersonagens += resumoPersonagem;
 	
-	arquivo.escreverArquivo("Saves/SavesDisponiveis", arquivoResumoPersonagens);
+	arquivo.apagarArquivo("Saves/SavesDisponiveis");
+
+	arquivo.escreverArquivo("Saves/SavesDisponiveis", novoResumoPersonagens);
 }
 
 string Heroi::getSavesDisponiveis(){
@@ -137,7 +142,7 @@ bool Heroi::carregarPersonagem()
             std::string valor = linha.substr(3); // ignora "X: "
             atributos[chave] = valor;
         } else if (linha.find(';') != string::npos) {
-            atributos['X'] = linha; // posição final
+            adicionarItemAoInventario(linha);
         }
     }
 
