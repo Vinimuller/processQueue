@@ -6,6 +6,49 @@ void Inventario::adicionarItem(Item& item) {
     itens.push_back(item);
 }
 
+void Inventario::run(){
+    if (itens.empty()) {
+        std::cout << "Inventário vazio!" << std::endl;
+    }
+    else {
+        int itemIndex = 1;
+        for (auto& item : itens) {
+            
+            cout << "> " << to_string(itemIndex) <<  " - Nome: " << item.getNome() << ", Tipo: " << item.getTipo()
+                << ", Combate: " << item.getCombate() << ", FA: " << item.getFA()
+                << ", Dano: " << item.getDano() << std::endl;
+            itemIndex++;
+        }
+    }
+
+    cout << endl;
+
+    cout << "> 1 - Voltar para a tela anterior" << endl;
+    cout << "> 2 - Equipar item (irá desequipar atual)" << endl;
+
+    int escolha = userInput.rangedReadNumber(1, 2);
+    switch(escolha){
+        case 1:
+            return;
+            break;
+        case 2:
+            {
+                cout << "Indice do item que deseja equipar: " << endl;
+                Item itemEscolhido = itens[(userInput.rangedReadNumber(1, itens.size()) - 1)];
+                equiparItem(itemEscolhido.getNome());
+            }
+            break;
+        default:
+            break;
+    }
+
+
+    //Voltar
+    //Equipar item
+    //Usar item
+    
+}
+
 // Lista todos os itens do invent�rio
 void Inventario::listarItens(){
     if (itens.empty()) {
@@ -39,11 +82,11 @@ string Inventario::getListaDeItens(){
 }
 
 // Equipar um item
-bool Inventario::equiparItem(std::string& nome) {
+bool Inventario::equiparItem(string nome) {
     for (auto& item : itens) {
         if (item.getNome() == nome) {
             itemEquipado = item;  // Equipando o item
-            std::cout << "Item " << nome << " equipado!" << std::endl;
+            cout << nome << " equipado!" << std::endl;
             return true;
         }
     }

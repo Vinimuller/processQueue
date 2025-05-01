@@ -132,7 +132,7 @@ int Personagem::usarSorte() {
 void Personagem::mostrarInventario(){
 	
     cout << "Inventário de " << nome << ":" << endl;
-	inventario.listarItens();
+	inventario.run();
 }
 
 void Personagem::adicionarItemAoInventario(string item) {
