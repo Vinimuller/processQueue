@@ -1,0 +1,7 @@
+N: Zabuza
+H: 12
+S: 4
+E: 15
+P: 0
+C: m2
+Adaga Meia-Lua;A;1;1;40;

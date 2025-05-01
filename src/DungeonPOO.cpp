@@ -38,7 +38,10 @@ int main() {
         case 2:
             // Carregar aventura 
             // Falta implementar o inventario
-            heroi.carregarPersonagem("personagem");
+            if(heroi.carregarPersonagem() == false){
+                cout << "Não foi possível carregar o personagem desejado, reinicie o jogo..." << endl;
+                return 0;
+            }
             orquestradorCenas.setUltimaCena(heroi.getUltimaCena());
             break;
         default:

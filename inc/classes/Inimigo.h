@@ -7,6 +7,6 @@ public:
     Inimigo();
     ~Inimigo();
 
-    void carregarPersonagem(string atributosInimigo) override;
+    void carregarPersonagem(string atributosInimigo);
 
 };

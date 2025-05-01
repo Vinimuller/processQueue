@@ -1,0 +1,2 @@
+Nome:nobel|  Habilidade:12|  Sorte:10|  Energia:12|  Provisões:0|
+Nome:Morcegao|  Habilidade:12|  Sorte:9|  Energia:15|  Provisões:0|

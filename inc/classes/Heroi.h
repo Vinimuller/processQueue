@@ -3,6 +3,7 @@
 #include <string>
 
 #include "Personagem.h"
+#include "UserInput.h"
 
 class Heroi : public Personagem{
 public:
@@ -11,10 +12,13 @@ public:
 
     void setUltimaCena(string ultimaCena);
     string getUltimaCena();
-    void carregarPersonagem(string nomePersonagem) override;
+    bool carregarPersonagem();
+    void adicionarResumoDePersonagens();
+    string getSavesDisponiveis();
     
     bool save();
 private:
     string gerarSaveInventario();
     string ultimaCena;
+    UserInput userInput;
 };

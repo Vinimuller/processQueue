@@ -12,6 +12,7 @@ string Heroi::getUltimaCena(){
 }
 
 bool Heroi::save(){
+
 	string newSave;
 	newSave += "N: ";
 	newSave += this->nome;
@@ -43,19 +44,90 @@ bool Heroi::save(){
 
 	newSave += inventario.getListaDeItens();
 
-	arquivo.apagarArquivo("personagem");
+	string arquivoParaSalvar = "Saves/";
+	arquivoParaSalvar += this->nome;
 
-	arquivo.escreverArquivo("personagem", newSave);
-	
-	return true;
+	adicionarResumoDePersonagens();
+
+	arquivo.apagarArquivo(arquivoParaSalvar);
+	return arquivo.escreverArquivo(arquivoParaSalvar, newSave);
 
 }
 
-void Heroi::carregarPersonagem(string nomePersonagem)
-{
-	string personagemFormatado = arquivo.lerArquivo(nomePersonagem);
+void Heroi::adicionarResumoDePersonagens(){
+	
+	string arquivoResumoPersonagens = arquivo.lerArquivo("Saves/savesDisponiveis");
 
-	istringstream iss(personagemFormatado);
+	arquivo.exibirCena("Saves/savesDisponiveis");
+
+	stringstream ss(arquivoResumoPersonagens);
+	string linha;
+	
+	while(getline(ss, linha)){
+		if(linha.find(this->nome) == 0){
+			linha.erase();
+		}
+	}
+	
+	string resumoPersonagem;
+	resumoPersonagem += "Nome:"; resumoPersonagem += this->nome; resumoPersonagem += "|  ";
+	resumoPersonagem += "Habilidade:"; resumoPersonagem += to_string(this->habilidade); resumoPersonagem += "|  ";
+	resumoPersonagem += "Sorte:"; resumoPersonagem += to_string(this->sorte); resumoPersonagem += "|  ";
+	resumoPersonagem += "Energia:"; resumoPersonagem += to_string(this->energia); resumoPersonagem += "|  ";
+	resumoPersonagem += "Provisões:"; resumoPersonagem += to_string(this->quantidadeDeProvisoes); resumoPersonagem += "|  ";
+	resumoPersonagem += "\n";
+	//resumoPersonagem += "T:"; resumoPersonagem += this->tesouro; resumoPersonagem += ";  ";
+
+	arquivoResumoPersonagens += resumoPersonagem;
+	
+	arquivo.escreverArquivo("Saves/SavesDisponiveis", arquivoResumoPersonagens);
+}
+
+string Heroi::getSavesDisponiveis(){
+
+	string savesDisponiveis = arquivo.lerArquivo("Saves/SavesDisponiveis");
+
+	if(savesDisponiveis == ""){
+		return "";
+	}
+
+	stringstream ss(savesDisponiveis);
+	string linha;
+
+	map<int, std::string> saves;
+	int indiceSave = 1;
+
+	cout << "Escolha o Personagem que deseja carregar:" << endl;
+
+	while(getline(ss, linha)){
+		if(linha.rfind('N', 0) == 0){
+			size_t inicio = linha.find("Nome:") + 5;
+			size_t fim = linha.find('|', inicio);
+			saves[indiceSave] = linha.substr(inicio, fim - inicio);
+			cout << "> " << indiceSave << " - " << linha << endl;
+			indiceSave++;
+		}
+	}
+
+	cout << endl;
+
+	int escolha = userInput.rangedReadNumber(1, indiceSave);
+
+	return ("Saves/" + saves[escolha]);
+
+}
+
+bool Heroi::carregarPersonagem()
+{
+	string arquivoDoPersonagem = getSavesDisponiveis();
+
+	if(arquivoDoPersonagem == ""){
+		return false;
+	}
+
+	string personagemFormatado = arquivo.lerArquivo(arquivoDoPersonagem);
+
+	stringstream iss(personagemFormatado);
     string linha;
     map<char, std::string> atributos;
 
@@ -75,6 +147,6 @@ void Heroi::carregarPersonagem(string nomePersonagem)
 	this->energia = stoi(atributos['E']);
 	this->ultimaCena = atributos['C'];
 	this->quantidadeDeProvisoes = stoi(atributos['P']);
-	
-	//cout << "Personagem carregado: " << this->nome << endl;
+
+	return true;
 }
