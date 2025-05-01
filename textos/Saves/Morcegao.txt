@@ -1,7 +1,14 @@
 N: Morcegao
 H: 12
-S: 7
-E: 15
+S: 2
+E: 4
 P: 0
-C: m2
+C: m8
 Adaga Meia-Lua;A;1;1;40;
+loot;equipamento;0;0;0;
+loot;equipamento;0;0;0;
+loot;equipamento;0;0;0;
+loot;equipamento;0;0;0;
+loot;equipamento;0;0;0;
+ sala;sala1;0;0;0;
+loot;equipamento;0;0;0;

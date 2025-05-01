@@ -51,6 +51,10 @@ public:
     void equiparItem(string& nome);
     void usarItem(string& nome);
 
+	int getDanoDaArma();
+    int getFADaArma();
+    string getNomeDaArma();
+
 protected:
 	string nome;
 	int energia = 12;

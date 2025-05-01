@@ -20,6 +20,10 @@ public:
     void usarItem(std::string& nome);
     string getListaDeItens();
 
+    int getDanoItemEquipado();
+    int getFAItemEquipado();
+    string getNomeItemEquipado();
+
 private:
     std::vector<Item> itens;  // Lista de itens no invent�rio
     Item itemEquipado;  // Item que est� atualmente equipado

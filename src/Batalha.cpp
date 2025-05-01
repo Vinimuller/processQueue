@@ -57,18 +57,20 @@ bool Batalha::run(){
                 {
                 usuarioFezEscolha = true;
                 cout << "Voce tenta atacar seu inimigo, e..." << endl;
-                int testeHeroi = heroi->testeDeAtaque(perguntaQuerUtilizarSorte());
-                int testeInimigo = inimigo->testeDeAtaque(rand() % 2);
+                int testeHeroi = heroi->testeDeAtaque(perguntaQuerUtilizarSorte()) + heroi->getFADaArma();
+                int testeInimigo = inimigo->testeDeAtaque(rand() % 2) + inimigo->getFADaArma();
                 int diferenca = abs(testeHeroi - testeInimigo);
                 if(testeHeroi >= testeInimigo){
                     //heroi vence teste
-                    cout << "Voce acerta!" << "(" << diferenca << " de dano)" << endl;
-                    inimigo->removerEnergia(diferenca);
+                    int dano = diferenca + heroi->getDanoDaArma();
+                    cout << "Voce acerta!" << "(" << (dano) << " de dano)" << endl;
+                    inimigo->removerEnergia(dano);
                 } else {
                     //inimigo vence teste
+                    int dano = diferenca + inimigo->getDanoDaArma();
                     cout << "O seu inimigo é mais habilidoso, desviando do seu ataque e acertando-o ";
-                    cout << "(" << diferenca << " de dano)" << endl;
-                    heroi->removerEnergia(diferenca);
+                    cout << "(" << dano << " de dano)" << endl;
+                    heroi->removerEnergia(dano);
                 }
                 if(heroi->getEnergia() <= 0 || inimigo->getEnergia() <= 0){
                     batalhaFinalizada = true;
@@ -91,4 +93,14 @@ bool Batalha::run(){
 
 }
 
+int Personagem::getDanoDaArma(){
+	return inventario.getDanoItemEquipado();
+}
 
+int Personagem::getFADaArma(){
+	return inventario.getFAItemEquipado();
+}
+
+string Personagem::getNomeDaArma(){
+	return inventario.getNomeItemEquipado();
+}

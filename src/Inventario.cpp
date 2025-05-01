@@ -105,3 +105,15 @@ void Inventario::usarItem(std::string& nome) {
     }
     std::cout << "Item não encontrado no inventário!" << std::endl;
 }
+
+int Inventario::getDanoItemEquipado(){
+    return itemEquipado.getDano();
+}
+
+int Inventario::getFAItemEquipado(){
+    return itemEquipado.getFA();
+}
+
+string Inventario::getNomeItemEquipado(){
+    return itemEquipado.getNome();
+}

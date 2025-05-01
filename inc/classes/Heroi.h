@@ -15,7 +15,6 @@ public:
     bool carregarPersonagem();
     void adicionarResumoDePersonagens();
     string getSavesDisponiveis();
-    
     bool save();
 private:
     string gerarSaveInventario();
