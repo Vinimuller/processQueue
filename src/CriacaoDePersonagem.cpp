@@ -13,8 +13,9 @@ void CriacaoDePersonagem::run(Heroi *heroi) {
 	// int habilidade;
 	// int quantidadeDeProvisoes;
 
-    std::cout << "=== Criação de Personagem ===" << endl;
+    dungeonUtils.limparTerminal();
 
+    std::cout << "=== Criação de Personagem ===" << endl;
     
 
     std::cout << "Digite o nome do herói: ";
@@ -74,6 +75,8 @@ void CriacaoDePersonagem::run(Heroi *heroi) {
     }
     
     heroi->setMaximoDeEnergia(heroi->getEnergia());
+
+    dungeonUtils.limparTerminal();
     
     }
     std::cout << "Herói criado com sucesso!" << endl;

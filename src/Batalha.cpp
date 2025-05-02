@@ -49,7 +49,6 @@ bool Batalha::run(){
         //Inicia turno
         bool usuarioFezEscolha = false;
         while (usuarioFezEscolha == false){
-            cout << "FLAG 2" << endl;
             mostrarStatus(heroi, inimigo);
             exibirOpcoes();
             switch (userInput.rangedReadNumber(1, 2))
@@ -61,6 +60,7 @@ bool Batalha::run(){
                 int testeHeroi = heroi->testeDeAtaque(perguntaQuerUtilizarSorte()) + heroi->getFADaArma();
                 int testeInimigo = inimigo->testeDeAtaque(rand() % 2) + inimigo->getFADaArma();
                 int diferenca = abs(testeHeroi - testeInimigo);
+                dungeonUtils.limparTerminal();
                 if(testeHeroi >= testeInimigo){
                     //heroi vence teste
                     int dano = diferenca + heroi->getDanoDaArma();

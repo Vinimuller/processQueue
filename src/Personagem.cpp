@@ -118,12 +118,12 @@ int Personagem::testeDeAtaque(bool usarSorte)
 
 
 int Personagem::usarSorte() {
-	// Declara as vari�veis locais
+	//Declara o número randomizado
 	int numeroRandomizado = rand() % 12;
-	int resultado = abs(sorte - numeroRandomizado);
+	int resultado = 0;
 	// Se o n�mero randomizado for maior que a sorte, ele teve m� sorte
-	if (numeroRandomizado % 12 > sorte) {
-		resultado = resultado*(-1);
+	if (numeroRandomizado <= sorte) {
+		resultado = sorte -numeroRandomizado;
 	}
 	sorte--;
 	return resultado;

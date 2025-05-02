@@ -65,10 +65,11 @@ void Heroi::adicionarResumoDePersonagens(){
 	string linha;
 	
 	while(getline(ss, linha)){
-		if(linha.find(this->nome) != 0){
+		if(linha.find(this->nome) == string::npos){
 			novoResumoPersonagens += linha;
 			novoResumoPersonagens += "\n";
-
+		} else {
+			cout << "Apareceu" << endl;
 		}
 	}
 	
@@ -182,4 +183,20 @@ void Heroi::setMaximoDeEnergia(int maxEnergia){
 void Heroi::getProvisao(int quantidade){
 	this->addProvisao(quantidade);
 	cout << "Você encontra provisões! (" << quantidade << ")" << endl;	
+}
+
+void Heroi::printStats(){
+
+	cout << getNome() << endl;
+	cout <<"Energia: ";
+	for(int i = 0; i < getEnergia(); i++){
+        cout << "#";
+    }
+	cout << endl;
+	cout << "Sorte: ";
+	for(int i = 0; i < getSorte(); i++){
+        cout << "$";
+    }
+	cout << "\n" << endl;
+
 }

@@ -1,7 +1,0 @@
-N: Montevideu
-H: 6
-S: 3
-E: 15
-P: 0
-C: m2
-Adaga Meia-Lua;A;1;1;40;

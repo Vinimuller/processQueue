@@ -4,6 +4,7 @@
 #include <string>
 #include "Heroi.h"
 #include "UserInput.h"
+#include "DungeonUtils.h"
 
 using namespace std;
 
@@ -15,6 +16,7 @@ public:
     void run(Heroi *heroi);
 
 private:
+    DungeonUtils dungeonUtils;
     UserInput userInput;
 
 };

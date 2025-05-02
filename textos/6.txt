@@ -1,7 +1,0 @@
-Um pedestal de pedra repousa no centro da sala. Sobre ele, uma garrafa de vidro envolta em névoa. A poção cintila com uma cor azul intensa.
-
-I: poção;andar1p1;0;0;0
->1: Beber a poção
->2: Guardar para depois
-
-12;13

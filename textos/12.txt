@@ -1,7 +1,0 @@
-Você abre um baú forjado em obsidiana e encontra uma espada encantada e um bracelete de regeneração.
-
-I: loot;equipamento3;0;0;0
->1: Equipar tudo
->2: Analisar os itens
-
-6;7

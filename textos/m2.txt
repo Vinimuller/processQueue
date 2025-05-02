@@ -1,11 +1,9 @@
-Um grunhido gutural ressoa antes que você possa reagir. Uma criatura grotesca salta da escuridão, armada com garras feitas de osso e olhos inflamados de fúria. Você desembainha sua arma, pronto para o combate.
+Você entra no vilarejo com calma, mas um som lhe surpreende. Correndo em sua direção, você vê um goblin vermelho, gritando como um louco.
+Não há mais tempo, a única opção é lutar!
 
-N: Goblin Sombrio
-M: S
-H: 2
-S: 6
-E: 8
-T: 700
-P: 0
-I: combate;mob1;0;0;0
+N: Goblin Vermelho
+H: 7
+S: 10
+E: 4
+
 4;5

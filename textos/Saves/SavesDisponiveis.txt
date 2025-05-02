@@ -1,1 +1,7 @@
-Nome:hahav|  Habilidade:6|  Sorte:6|  Energia:24|  Provisões:2|  
+Nome:Makee|  Habilidade:6|  Sorte:10|  Energia:10|  Provisões:0|  
+Nome:GranGran|  Habilidade:6|  Sorte:6|  Energia:24|  Provisões:0|  
+Nome:JarJar|  Habilidade:12|  Sorte:4|  Energia:10|  Provisões:0|  
+Nome:joro|  Habilidade:12|  Sorte:10|  Energia:10|  Provisões:0|  
+Nome:Ganso gag�|  Habilidade:12|  Sorte:12|  Energia:12|  Provisões:0|  
+Nome:Babao|  Habilidade:6|  Sorte:1|  Energia:2|  Provisões:0|  
+Nome:jaja|  Habilidade:8|  Sorte:1|  Energia:6|  Provisões:0|  

@@ -1,7 +1,12 @@
-Em meio a destroços, você encontra um armário enferrujado. Dentro, há uma pequena coleção de equipamentos antigos, mas ainda úteis. Uma espada rústica e uma poção avermelhada.
+O goblin, derrotado, bate em retirada, deixando cair uma adaga brilhante que usou para lutar com você!
+As portas começam a se abrir, os aldeões começam a surgir de dentro das casas e vêm na sua direção, aparentemente querendo conversar com você.
+No entanto, se ficar, vai perder de vista o goblin, que deve estar indo para o seu esconderijo.
 
-I:loot;equipamento;0;0;0
->1: Pegar tudo
->2: Usar a poção agora
 
-m8;m11
+> 1 - Pegar adaga
+> 2 - Correr e seguir o goblin
+> 3 - Ficar e conversar com os aldeões
+> 4 - Utilizar provisão
+> 5 - Ver inventario
+I: Adaga de combate;A;1;2;2;
+6;7

@@ -28,7 +28,7 @@ void OrquestradorCenas::carregarDescricao(string cena){
     while(getline(stream, linha)){
         if(linha.rfind("N:", 0) == 0 || linha.rfind("m", 0) == 0){
             break;
-        } else if (linha.rfind("I:", 0) == 0 || linha.rfind("P:", 0) == 0){
+        } else if (linha.rfind("I:", 0) == 0 || linha.rfind("P:", 0) == 0 || isdigit(linha[0])){
 
         } else {
             descricao += linha + "\n";
@@ -121,15 +121,12 @@ void OrquestradorCenas::getProvisaoDaCena(string cena){
 
 
 void OrquestradorCenas::runCena(){
+    clearTheTerminal();
+    heroi->printStats();
     string cena = arquivo.lerArquivo(this->ultimaCena);
-    carregarDescricao(cena);
-    cout << "FLAG 1" << endl;
-
     getProvisaoDaCena(cena);
-    cout << "FLAG 2" << endl;
-
+    carregarDescricao(cena);
     getProximasCenas(cena);
-
     if(hasItemNaCena(cena)) getItensDaCena(cena);
 
     if(ultimaCena.at(0) == 'm'){
@@ -154,21 +151,29 @@ void OrquestradorCenas::runCena(){
         // espera resposta de usuário
     } else {
         bool cenaCompleta = false;
+        bool itemColetado = false;
         while(cenaCompleta == false){
-            int maximoDeOpcoes = hasItemNaCena(cena) ? 4 : 3;
+            int maximoDeOpcoes = hasItemNaCena(cena) ? 5 : 4;
             int opcaoSelecionada = userInput.rangedReadNumber(1, maximoDeOpcoes);
-            if(opcaoSelecionada == maximoDeOpcoes - 2){
-                heroi->usarProvisao();
-            } else if(opcaoSelecionada == maximoDeOpcoes - 1){
+            if(opcaoSelecionada == maximoDeOpcoes - 3){
                 ultimaCena = proximaCenaA;
                 cenaCompleta = true;
-            } else if(opcaoSelecionada == maximoDeOpcoes){
+            } else if(opcaoSelecionada == maximoDeOpcoes - 2){
                 ultimaCena = proximaCenaB;
                 cenaCompleta = true;
+            } else if(opcaoSelecionada == maximoDeOpcoes - 1){
+                heroi->usarProvisao();
+            } else if(opcaoSelecionada == maximoDeOpcoes){
+                heroi->mostrarInventario();
             } else {
-                heroi->adicionarItemAoInventario(itensDaCena[opcaoSelecionada]);
                 int posicaoMarcadorNomeDoItem = itensDaCena[opcaoSelecionada].find(';');
-                cout << itensDaCena[opcaoSelecionada].substr(0, posicaoMarcadorNomeDoItem) << " adicionado ao inventário de " << heroi->getNome();
+                if(itemColetado == true){
+                    cout << itensDaCena[opcaoSelecionada].substr(0, posicaoMarcadorNomeDoItem) << " já está no seu inventário..." << endl;
+                } else {
+                    heroi->adicionarItemAoInventario(itensDaCena[opcaoSelecionada]);
+                    cout << itensDaCena[opcaoSelecionada].substr(0, posicaoMarcadorNomeDoItem) << " adicionado ao inventário de " << heroi->getNome() << endl;      
+                    itemColetado = true;
+                }
             }
         }
 

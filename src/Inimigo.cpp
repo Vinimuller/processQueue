@@ -22,7 +22,6 @@ void Inimigo::carregarPersonagem(string atributosInimigo){
 	this->habilidade = stoi(atributos['H']);
 	this->sorte = stoi(atributos['S']);
 	this->energia = stoi(atributos['E']);
-	this->quantidadeDeProvisoes = stoi(atributos['P']);
 	
 	//cout << "Personagem carregado: " << this->nome << endl;
 }

@@ -1,7 +1,0 @@
-Você encontra uma poção esverdeada em um canto empoeirado. Ela emite um leve calor ao toque.
-
-I: poção;andar1p2;0;0;0
->1: Consumir a poção
->2: Armazenar no inventário
-
-4;m5

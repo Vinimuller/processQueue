@@ -1,7 +1,0 @@
-A sala contém uma estátua quebrada de um guerreiro. Em suas mãos, um objeto que brilha levemente.
-
-I: sala;sala1;0;0;0
->1: Tocar o objeto
->2: Ignorar e seguir
-
-m2;m3

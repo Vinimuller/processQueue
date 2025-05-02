@@ -5,6 +5,7 @@
 #include "Heroi.h"
 #include "Inimigo.h"
 #include "UserInput.h"
+#include "DungeonUtils.h"
 
 class Batalha {
 public:
@@ -20,6 +21,7 @@ private:
     Heroi *heroi;
     Inimigo *inimigo;
     UserInput userInput;
+    DungeonUtils dungeonUtils;
     void mostrarStatus(Heroi *heroi, Inimigo *inimigo);
 
 };

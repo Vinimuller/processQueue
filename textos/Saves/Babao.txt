@@ -1,0 +1,7 @@
+N: Babao
+H: 6
+S: 1
+E: 2
+P: 0
+C: 6
+ Adaga de combate;A;1;2;2;

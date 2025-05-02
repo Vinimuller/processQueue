@@ -1,0 +1,7 @@
+N: Makee
+H: 6
+S: 10
+E: 10
+P: 0
+C: 6
+ Adaga de combate;A;1;2;2;

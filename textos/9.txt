@@ -1,7 +1,0 @@
-Você encontra uma passagem escondida atrás de uma parede falsa. O ar frio sopra de dentro da escadaria.
-
-I: escada;secreta;0;0;0
->1: Descer com cautela
->2: Voltar e explorar mais do andar 1
-
-12;13

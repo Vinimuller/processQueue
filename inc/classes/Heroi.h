@@ -19,6 +19,8 @@ public:
     void usarProvisao();
     void getProvisao(int quantidade);
     bool save();
+    void printStats();
+
 private:
     string gerarSaveInventario();
     string ultimaCena;
