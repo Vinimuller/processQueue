@@ -1,0 +1,8 @@
+A neve cai lentamente, cobrindo o chão da floresta com um manto branco e silencioso. De entre as árvores, olhos brilhantes surgem na penumbra — lobos. Um a um, eles avançam em círculo, rosnando com os pelos arrepiados. Você empunha sua arma, o coração disparado. Não há para onde correr. É hora de lutar.
+
+N: Lobo
+H: 5
+S: 0
+E: 6
+P: 1
+4;1

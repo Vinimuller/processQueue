@@ -24,17 +24,13 @@ bool Batalha::perguntaQuerUtilizarSorte(){
 }
 
 void Batalha::mostrarStatus(Heroi *heroi, Inimigo *inimigo){
+    
+    heroi->printStats();
+    
     cout << endl;
     cout << inimigo->getNome() << endl;
     cout << "Energia: ";
     for(int i = 0; i < inimigo->getEnergia(); i++){
-        cout << "#";
-    }
-
-    cout << "\n\n";
-    cout << heroi->getNome() << endl;
-    cout << "Energia: ";
-    for(int i = 0; i < heroi->getEnergia(); i++){
         cout << "#";
     }
     cout << endl;
@@ -84,6 +80,7 @@ bool Batalha::run(){
             default:
                 break;
             }
+            dungeonUtils.limparTerminal();
         }
     }
     if(heroi->getEnergia() <= 0){

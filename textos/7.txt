@@ -1,0 +1,11 @@
+O velho segue andando em direção a caverna, como se não visse, ou não se importasse com você.
+Quando você se aproxima, ele finalmente para, e uma voz grave fala:
+
+"Saia da frente, mero andarílio, não quero me desgastar com você"
+
+> 1: Assumir postura de batalha
+> 2: Fingir serventia e pedir para entrar junto com o velho
+> 3: Utilizar provisão
+> 4: Ver Inventario
+
+m8;29

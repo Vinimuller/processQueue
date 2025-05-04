@@ -153,6 +153,9 @@ void OrquestradorCenas::runCena(){
         bool cenaCompleta = false;
         bool itemColetado = false;
         while(cenaCompleta == false){
+            clearTheTerminal();
+            heroi->printStats();
+            carregarDescricao(cena);
             int maximoDeOpcoes = hasItemNaCena(cena) ? 5 : 4;
             int opcaoSelecionada = userInput.rangedReadNumber(1, maximoDeOpcoes);
             if(opcaoSelecionada == maximoDeOpcoes - 3){

@@ -54,6 +54,7 @@ public:
 	int getDanoDaArma();
     int getFADaArma();
     string getNomeDaArma();
+	string getNomeItemEquipado();
 
 protected:
 	string nome;

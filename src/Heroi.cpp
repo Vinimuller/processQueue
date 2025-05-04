@@ -197,6 +197,11 @@ void Heroi::printStats(){
 	for(int i = 0; i < getSorte(); i++){
         cout << "$";
     }
+
+	cout << endl;
+
+	cout << "Item equipado: " << getNomeItemEquipado() << endl;
+
 	cout << "\n" << endl;
 
 }

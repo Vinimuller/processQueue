@@ -86,6 +86,7 @@ bool Inventario::equiparItem(string nome) {
     for (auto& item : itens) {
         if (item.getNome() == nome) {
             itemEquipado = item;  // Equipando o item
+            nomeItemEquipado = item.getNome();
             cout << nome << " equipado!" << std::endl;
             return true;
         }
@@ -93,6 +94,7 @@ bool Inventario::equiparItem(string nome) {
     std::cout << "Item não encontrado no inventário!" << std::endl;
     return false;
 }
+
 
 // Usar um item
 void Inventario::usarItem(std::string& nome) {

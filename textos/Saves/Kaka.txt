@@ -1,7 +1,7 @@
-N: JarJar
+N: Kaka
 H: 12
-S: 10
-E: 12
+S: 4
+E: 17
 P: 0
 C: m2
 Espada de aço;A;1;2;3;

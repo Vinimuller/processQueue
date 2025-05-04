@@ -171,6 +171,11 @@ void Personagem::adicionarItemAoInventario(Item& item) {
 
 void Personagem::equiparItem(string& nome) {
     inventario.equiparItem(nome);
+
+}
+
+string Personagem::getNomeItemEquipado(){
+	return inventario.getNomeItemEquipado();
 }
 
 void Personagem::usarItem(string& nome) {

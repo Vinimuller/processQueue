@@ -81,4 +81,12 @@ void CriacaoDePersonagem::run(Heroi *heroi) {
     }
     std::cout << "Herói criado com sucesso!" << endl;
 
+    std::cout << "Equipamento inicial: Espada de aço" << endl;
+
+    heroi->adicionarItemAoInventario("Espada de aço;A;1;2;3");
+
+    string itemInicial = "Espada de aço";
+
+    heroi->equiparItem(itemInicial);
+
     }

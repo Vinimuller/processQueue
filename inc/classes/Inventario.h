@@ -28,6 +28,7 @@ private:
     std::vector<Item> itens;  // Lista de itens no invent�rio
     Item itemEquipado;  // Item que est� atualmente equipado
     UserInput userInput;
+    string nomeItemEquipado;
 };
 
 #endif // INVENTARIO_H

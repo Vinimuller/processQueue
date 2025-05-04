@@ -1,7 +1,0 @@
-N: jaja
-H: 8
-S: 1
-E: 6
-P: 0
-C: 6
- Adaga de combate;A;1;2;2;

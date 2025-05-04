@@ -1,12 +1,8 @@
-O goblin, derrotado, bate em retirada, deixando cair uma adaga brilhante que usou para lutar com você!
-As portas começam a se abrir, os aldeões começam a surgir de dentro das casas e vêm na sua direção, aparentemente querendo conversar com você.
-No entanto, se ficar, vai perder de vista o goblin, que deve estar indo para o seu esconderijo.
+Entre as árvores cobertas de neve, você avista a entrada de uma caverna escura, parcialmente oculta por pedras e galhos. Do interior, ecoam sons estranhos — como passos arrastados, respirações profundas e o gotejar constante da água. O ar que sai da caverna é úmido e frio, fazendo você estremecer. Algo — ou alguém — está lá dentro.
 
+> 1: Entrar na caverna
+> 2: Esperar do lado da caverna para ver as movimentações
+> 3: Utilizar provisão
+> 4: Ver Inventario
 
-> 1 - Pegar adaga
-> 2 - Correr e seguir o goblin
-> 3 - Ficar e conversar com os aldeões
-> 4 - Utilizar provisão
-> 5 - Ver inventario
-I: Adaga de combate;A;1;2;2;
-6;7
+16;5
