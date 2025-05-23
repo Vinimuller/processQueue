@@ -1,8 +1,0 @@
-Você está parado sob a neve silenciosa, o frio cortando até os ossos. Ao longe, entre os flocos brancos que caem sem cessar, uma silhueta se forma. Um velho, de passos lentos e firmes, veste roupas longas e escuras, parcialmente cobertas por neve. Ele segura um cajado entalhado, e seus olhos parecem brilhar mesmo à distância. Ele segue direto em sua direção, como se já soubesse que você estaria ali.
-
-> 1: Chamar a atenção e conversar com o velho
-> 2: Esperar em silêncio o velho entrar na caverna
-> 3: Utilizar provisão
-> 4: Ver Inventario
-
-7;11

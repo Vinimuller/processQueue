@@ -1,9 +1,0 @@
-Você entra no vilarejo com calma, mas um som lhe surpreende. Correndo em sua direção, você vê um goblin vermelho, gritando como um louco.
-Não há mais tempo, a única opção é lutar!
-
-N: Goblin Vermelho
-H: 7
-S: 10
-E: 4
-
-27;5

@@ -1,7 +1,0 @@
-N: JarJar
-H: 12
-S: 10
-E: 12
-P: 0
-C: m2
-Espada de aço;A;1;2;3;

@@ -1,8 +1,0 @@
- De repente, um grito corta o silêncio — é agudo, desesperado, a voz de uma criança pedindo socorro. O som vem das profundezas da caverna, reverberando entre os corredores rochosos. Seu instinto grita por ação.
-
-> 1: Entrar na caverna
-> 2: Ignorar e continuar esperando
-> 3: Utilizar provisão
-> 4: Ver Inventario
-
-16;6

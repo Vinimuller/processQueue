@@ -1,4 +1,0 @@
-Nome:Tavares|  Habilidade:12|  Sorte:10|  Energia:12|  Provisões:0|  
-Nome:JarJar|  Habilidade:12|  Sorte:10|  Energia:12|  Provisões:0|  
-Nome:Kaka|  Habilidade:12|  Sorte:4|  Energia:17|  Provisões:0|  
-Nome:Var|  Habilidade:12|  Sorte:10|  Energia:12|  Provisões:0|  

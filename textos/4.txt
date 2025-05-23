@@ -1,8 +1,0 @@
-Entre as árvores cobertas de neve, você avista a entrada de uma caverna escura, parcialmente oculta por pedras e galhos. Do interior, ecoam sons estranhos — como passos arrastados, respirações profundas e o gotejar constante da água. O ar que sai da caverna é úmido e frio, fazendo você estremecer. Algo — ou alguém — está lá dentro.
-
-> 1: Entrar na caverna
-> 2: Esperar do lado da caverna para ver as movimentações
-> 3: Utilizar provisão
-> 4: Ver Inventario
-
-16;5
