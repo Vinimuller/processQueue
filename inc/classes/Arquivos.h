@@ -24,6 +24,7 @@ public:
 	string lerArquivo(const string& filename);
 
 private:
+	string folderPath = "telas/";
 
 };
 

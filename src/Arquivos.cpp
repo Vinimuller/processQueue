@@ -1,7 +1,7 @@
 #include "../inc/classes/Arquivos.h"
 
 void Arquivos::apagarArquivo(const std::string& filename){
-    std::string nomeArquivo = "textos/" + filename + ".txt";
+    std::string nomeArquivo = this->folderPath + filename + ".txt";
 
     if (remove(nomeArquivo.c_str()) != 0) {
         cerr << "Erro ao apagar o arquivo: " << nomeArquivo << "\n";
@@ -19,7 +19,7 @@ void Arquivos::exibirCena(int cenaAtual) {
         system("clear"); // For Unix-like systems (Linux, macOS)
     #endif
 
-    std::string nomeArquivo = "textos/" + std::to_string(cenaAtual) + ".txt";
+    std::string nomeArquivo = this->folderPath + std::to_string(cenaAtual) + ".txt";
     std::ifstream arquivo(nomeArquivo);
 
     if (!arquivo.is_open()) {
@@ -43,7 +43,7 @@ void Arquivos::exibirCena(string cenaAtual) {
         system("clear"); // For Unix-like systems (Linux, macOS)
     #endif
 
-    std::string nomeArquivo = "textos/" + cenaAtual + ".txt";
+    std::string nomeArquivo = this->folderPath + cenaAtual + ".txt";
     std::ifstream arquivo(nomeArquivo);
     
 
@@ -63,7 +63,7 @@ void Arquivos::exibirCena(string cenaAtual) {
 
 // Escreve conteúdo em um arquivo
 bool Arquivos::escreverArquivo(const std::string& filename, const std::string& content) {
-    string nomeArquivo = "textos/" + filename + ".txt";
+    string nomeArquivo = this->folderPath + filename + ".txt";
     std::ofstream file(nomeArquivo);
     if (!file.is_open()) {
         std::cerr << "Erro ao abrir arquivo para escrita: " << filename << "\n";
@@ -76,7 +76,7 @@ bool Arquivos::escreverArquivo(const std::string& filename, const std::string& c
 
 // Lê conteúdo de um arquivo e retorna como string
 string Arquivos::lerArquivo(const std::string& filename) {
-    string nomeArquivo = "textos/" + filename + ".txt";
+    string nomeArquivo = this->folderPath + filename + ".txt";
     std::ifstream file(nomeArquivo);
     if (!file.is_open()) {
         std::cerr << "Erro ao abrir arquivo para leitura: " << filename << "\n";
