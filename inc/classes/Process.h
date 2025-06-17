@@ -1,5 +1,6 @@
 #pragma once
 #include <cstddef>
+#include <cstdint>
 #include <stdexcept>
 #include <iostream>
 #include "FIFO.h"
@@ -15,6 +16,7 @@ class Process{
         ~Process() {
 
         }
+        
 
         uint32_t getPID(){
             return pid;
