@@ -30,8 +30,3 @@ private:
     int ids;
 };
 
-#define COMPUTING_PROCESS 1
-#define PRINTING_PROCESS 2
-#define READING_PROCESS 3
-#define WRITING_PROCESS 4
-

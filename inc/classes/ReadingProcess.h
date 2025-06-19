@@ -35,6 +35,15 @@ class Reading_Process : public Process, public Arquivos {
             apagarArquivo(fileName);
             return 0;
         }
+
+        uint8_t getType(){
+            return READING_PROCESS;
+        }
+
+        std::string getInfo(){
+            return "Arquivo utilizado: " + fileName;
+        }
+
     private:
         FIFO<Process*> *processQueue;
         std::string fileName;

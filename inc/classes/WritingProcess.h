@@ -22,6 +22,14 @@ class Writing_Process : public Process, public Arquivos{
             return escreverArquivo(fileName, expression + "\n");
         }
 
+        uint8_t getType(){
+            return WRITING_PROCESS;
+        }
+
+        std::string getInfo(){
+            return "Arquivo utilizado: " + fileName;
+        }
+
     private:
         std::string expression;
         std::string fileName;
