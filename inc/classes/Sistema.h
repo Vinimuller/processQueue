@@ -5,6 +5,7 @@
 #include "WritingProcess.h"
 #include "UserInput.h"
 #include "Arquivos.h"
+#include "Tela.h"
 
 class Sistema{
 public:
@@ -22,6 +23,7 @@ private:
 
     Arquivos arquivos;
     UserInput userInput;
+    Tela tela;
 
     uint8_t executePID(FIFO<Process*> *processQueue, uint32_t _pid);
     uint8_t executeNextProcess(FIFO<Process*> *processQueue);

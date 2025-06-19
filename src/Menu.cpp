@@ -7,9 +7,10 @@ Menu::Menu(Sistema *sistema){
 Menu::~Menu(){}
 
 int Menu::run(){
+    limpaTerminal();
     arquivos.exibirCena("menu");
     int input = userInput.rangedReadNumber(1,6);
-
+    limpaTerminal();
     switch(input){
         case 1:
             //Cria processo

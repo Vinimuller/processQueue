@@ -20,3 +20,7 @@ void Tela::limpaTerminal(){
         system("clear"); // For Unix-like systems (Linux, macOS)
     #endif
 }
+
+void Tela::aguarde(){
+    userInput.waitEnter();
+}

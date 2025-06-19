@@ -58,8 +58,9 @@ int Sistema::generateNewID(){
 
 void Sistema::criarProcesso(){
     arquivos.exibirCena("menu-criarProc");
-    int processoEscolhido = userInput.rangedReadNumber(1,4);
+    int processoEscolhido = userInput.rangedReadNumber(1,5);
     bool processoFinalizado = false;
+    tela.limpaTerminal();
     while(processoFinalizado == false){
         switch (processoEscolhido)
         {
@@ -103,15 +104,19 @@ void Sistema::criarProcesso(){
                 break;
             }
         default:
+            return;
             break;
         }
     }
+    tela.limpaTerminal();
     cout << "Processo adicionado à fila!" << endl;
+    tela.aguarde();
 }
 
 void Sistema::executarProximo(){
     if(processQueue->getSize() == 0){
         cout << "Fila de processos vazia..." << endl;
+        tela.aguarde();
         return;
     }
     Process* temp = nullptr;
@@ -122,6 +127,7 @@ void Sistema::executarProximo(){
     temp = processQueue->pop();
     temp->execute();
     delete temp;
+    tela.aguarde();
 }
 
 void Sistema::executarProcessoEspecifico(){
@@ -146,9 +152,14 @@ void Sistema::executarProcessoEspecifico(){
         }
     }
 
-    if(processoEncontrado == false) cout << "Processo não encontrado" << endl;
+    if(processoEncontrado == false){
+      cout << "Processo não encontrado" << endl; 
+      cin.get(); 
+    } 
 
     processQueue = temporaryQueue;
+
+    tela.aguarde();
 }
 
 bool Sistema::salvarFilaDeProcessos(){

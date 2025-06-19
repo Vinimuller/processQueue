@@ -37,7 +37,13 @@ int UserInput::rangedReadNumber(int min, int max) {
 // Lê uma string do usuário
 string UserInput::readString() {
     string input;
-    getline(cin, input);
+    getline(cin >> ws, input);
     return input;
+}
+
+void UserInput::waitEnter(){
+    cout << "Pressione enter para continuar...";
+    string dummy;
+    getline(cin, dummy);
 }
 

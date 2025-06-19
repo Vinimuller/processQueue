@@ -17,5 +17,8 @@ public:
 
     // Lê uma string do usuário
     string readString();
+
+    // Espera que o usuario pressione enter para que o sistema continue o funcionamento
+    void waitEnter();
 };
 #endif
