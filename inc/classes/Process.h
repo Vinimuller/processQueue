@@ -5,6 +5,11 @@
 #include <iostream>
 #include "FIFO.h"
 
+#define COMPUTING_PROCESS 1
+#define PRINTING_PROCESS 2
+#define READING_PROCESS 3
+#define WRITING_PROCESS 4
+
 class Process{
     public:
         // Constructor
@@ -25,6 +30,12 @@ class Process{
         }
 
         virtual uint8_t execute() = 0;
+        
+        //Get process type
+        virtual uint8_t getType() = 0;
+
+        //Get more process info
+        virtual std::string getInfo() = 0;
 
         // Cast operator to std::string
         operator std::string() const {

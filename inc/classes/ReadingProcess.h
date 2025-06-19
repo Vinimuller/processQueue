@@ -16,6 +16,15 @@ class Reading_Process : public Process, public Arquivos {
         ~Reading_Process(){}
 
         uint8_t execute();
+
+        uint8_t getType(){
+            return READING_PROCESS;
+        }
+
+        std::string getInfo(){
+            return "Arquivo utilizado: " + fileName;
+        }
+        
     private:
         FIFO<Process*> *processQueue;
         std::string fileName;

@@ -12,6 +12,16 @@ class Printing_Process : public Process {
 
         uint8_t execute();
 
+        uint8_t getType(){
+            return PRINTING_PROCESS;
+        }
+
+        std::string getInfo(){
+            return "";
+        }
+
     private:
         FIFO<Process*> *processQueue;
+
+        void printProcess(Process* process);
 };

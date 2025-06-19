@@ -14,6 +14,14 @@ class Computing_Process : public Process {
 
         uint8_t execute();
 
+        uint8_t getType(){
+            return COMPUTING_PROCESS;
+        }
+
+        std::string getInfo(){
+            return "Expressão: " + expression;
+        }
+
         bool verifyExpression(std::string line);
     private:
         std::string expression;

@@ -1,14 +1,39 @@
 #include "../inc/classes/PrintingProcess.h"
 
+void Printing_Process::printProcess(Process* process){
+    switch(process->getType()){
+        case COMPUTING_PROCESS:
+            std::cout << "-- PID: " << process->getPID() << " | Computing Process" << " | " << process->getInfo() << std::endl;
+            break;
+        case PRINTING_PROCESS:
+            std::cout << "-- PID: " << process->getPID() << " | Printing Process" << std::endl;
+            break;
+        case WRITING_PROCESS:
+            std::cout << "-- PID: " << process->getPID() << " | Writing Process" << "   | " << process->getInfo() << std::endl;
+            break;
+        case READING_PROCESS:
+            std::cout << "-- PID: " << process->getPID() << " | Reading Process" << "   | " << process->getInfo() << std::endl;
+            break;
+        default:
+            break;
+    }
+}
+
 uint8_t Printing_Process::execute(){
-    std::cout << getPID() << " executando Printing_Process" << std::endl;
+    std::cout << "-- Executando Printing_Process (pid: " << getPID() << ") --"<< std::endl;
 
-    processQueue->display();
+    uint32_t size = processQueue->getSize();
+    Process* temp = nullptr;
+    uint8_t  result = 1;          
 
-    /*
-    (PrintingProcess): tem por objetivo simplesmente imprimir na tela o pool de processos a
-    serem executados. Imprimindo o pid, o tipo do processo e atributos relacionados, se for o caso.
-    */
+    //Procura por toda fifo.
+    for(int i = 0; i < size; i++){
+        temp = processQueue->pop();
 
+        printProcess(temp);
+
+        processQueue->push(temp);
+
+    }
     return 0;
 }

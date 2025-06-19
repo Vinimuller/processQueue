@@ -11,8 +11,6 @@ uint8_t Sistema::executePID(FIFO<Process*> *processQueue, uint32_t _pid){
     uint32_t size = processQueue->getSize();
     Process* temp = nullptr;
     uint8_t  result = 1;
-    
-    // processQueue.display();
 
     //Procura por toda fifo.
     for(uint32_t i = 0; i < size; i++){
