@@ -1,4 +1,5 @@
 #include"../inc/classes/Sistema.h"
+#include <sstream>
 
 Sistema::Sistema(){
     processQueue = new FIFO<Process*>();
@@ -46,9 +47,6 @@ uint8_t Sistema::executeNextProcess(FIFO<Process*> *processQueue){
 
     return result;
 }
-
-//     processQueue.push(new Writing_Process("20-5", 4));
-//     processQueue.push(new Reading_Process(processQueue, 5));
 
 int Sistema::generateNewID(){
     return ++ids;
@@ -161,9 +159,110 @@ void Sistema::executarProcessoEspecifico(){
 }
 
 bool Sistema::salvarFilaDeProcessos(){
+    std::string filename = "telas/queue.txt";
+     std::ofstream file(filename);
+    if (!file.is_open()) {
+        std::cerr << "Failed to open file: " << filename << "\n";
+        return false;
+    }
+
+    uint32_t size = processQueue->getSize();
+    Process* temp = nullptr;
+    uint8_t  result = 1;
+
+    processQueue->display();
+
+    //Procura por toda fifo.
+    for(uint32_t i = 0; i < size; i++){
+        temp = processQueue->pop();
+
+        file << temp->getType() << "|"
+            << temp->getPID() << "|"
+            << temp->getInfo() << std::endl;
+
+        processQueue->push(temp);
+    }
+
+    file.close();
+    std::cout << "Queue saved to " << filename << "\n";
+    cin.get(); 
+
     return true;
 }
 
+void createProcess(FIFO<Process*> *processQueue, int type, uint32_t pid, std::string data){
+    std::istringstream  iss(data);
+    std::string         token;
+     switch (type){
+        case COMPUTING_PROCESS:
+            iss >> token;
+            iss >> token;
+            std::cout << "Loded Computing process | PID: " << pid << " Exp: " << token << std::endl;
+            processQueue->push(new Computing_Process(token, pid));
+            break;
+        case PRINTING_PROCESS:
+            std::cout << "Loded Printing process | PID: " << pid << std::endl;
+            processQueue->push(new Printing_Process(processQueue, pid));
+            break;
+        case READING_PROCESS:
+            std::cout << "Loded Reading process | PID: " << pid << std::endl;
+            processQueue->push(new Reading_Process(processQueue, pid));
+            break;
+        case WRITING_PROCESS:
+            iss >> token;
+            iss >> token;
+            std::cout << "Loded Writing process | PID: " << pid << " Exp: " << token << std::endl;
+            processQueue->push(new Writing_Process(token, pid));
+            break;
+        default:
+            std::cout << " TIPO NAO IDENTIFICADO " << std::endl;
+            break;
+        }
+
+}
+
 bool Sistema::carregarFilaDeProcessos(){
+
+    std::string filename = "telas/queue.txt";
+    std::ifstream file(filename);
+    if (!file.is_open()) {
+        std::cerr << "Failed to open file: " << filename << "\n";
+        return false;
+    }
+
+    processQueue->display();
+
+    std::string content((std::istreambuf_iterator<char>(file)),
+                                std::istreambuf_iterator<char>());
+    
+    std::string buff = "";
+    for(size_t i=0; i < content.length(); i++){
+        if(content[i] != '\n'){
+            buff += content[i];
+        }else{
+            std::istringstream iss(buff);
+            std::string token;
+
+            std::getline(iss, token, '|');
+            char type = (token.c_str()[0]);
+            
+            std::getline(iss, token, '|');
+            uint32_t pid = std::stoi(token);
+
+            std::getline(iss, token, '|');
+            std::string data = token;
+
+            // std::cout << "type: " << type << " pid: " << pid << " data " << data << std::endl;
+            buff = "";
+
+            createProcess(processQueue, type, pid, data);
+        }
+    }
+
+    file.close();
+    processQueue->display();
+    std::cout << "Queue loaded from " << filename << "\n";
+    cin.get(); 
+
     return true;
 }

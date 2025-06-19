@@ -30,10 +30,12 @@ int Menu::run(){
         case 4:
             //Salva fila de processos
             cout << "Salvar fila de processos" << endl;
+            sistema->salvarFilaDeProcessos();
             break;
         case 5:
             //Carregar do arquivo a fila de processos
             cout << "Carregar arquivo" << endl;
+            sistema->carregarFilaDeProcessos();
             break;
         case 6:
             cout << "Encerrando sistema" << endl;

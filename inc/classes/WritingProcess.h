@@ -21,7 +21,7 @@ class Writing_Process : public Process, public Arquivos{
         }
 
         std::string getInfo(){
-            return "Arquivo utilizado: " + fileName;
+            return "Expressão: " + expression + " Arquivo utilizado: " + fileName;
         }
 
     private:
