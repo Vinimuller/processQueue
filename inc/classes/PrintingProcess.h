@@ -1,8 +1,9 @@
+#pragma once
 #include "Process.h"
 
 class Printing_Process : public Process {
     public:
-        Printing_Process(FIFO<Process*> _processQueue, const uint32_t _pid) 
+        Printing_Process(FIFO<Process*> *_processQueue, const uint32_t _pid) 
             : processQueue(_processQueue),
               Process(_pid) {}
 
@@ -11,7 +12,7 @@ class Printing_Process : public Process {
         uint8_t execute(){
             std::cout << getPID() << " executando Printing_Process" << std::endl;
 
-            processQueue.display();
+            processQueue->display();
 
             /*
             (PrintingProcess): tem por objetivo simplesmente imprimir na tela o pool de processos a
@@ -22,5 +23,5 @@ class Printing_Process : public Process {
         }
 
     private:
-        FIFO<Process*> processQueue;
+        FIFO<Process*> *processQueue;
 };

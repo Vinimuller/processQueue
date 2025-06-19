@@ -1,3 +1,4 @@
+#pragma once
 #include "Process.h"
 
 class Computing_Process : public Process {
@@ -29,6 +30,27 @@ class Computing_Process : public Process {
             */
 
             return 0;
+        }
+
+        bool verifyExpression(std::string line){
+            ComputationData computationData;
+
+            // Parse the line (assuming format: number1 operator number2)
+            size_t op_pos = line.find_first_of("+-*/");
+            if (op_pos == std::string::npos) {
+                std::cerr << "Invalid operation format: " << line << "\n";
+                return false;
+            }
+
+            try {
+                computationData.operand1 = std::stoi(line.substr(0, op_pos));
+                computationData.operand2 = std::stoi(line.substr(op_pos + 1));
+                computationData.op = line[op_pos];
+            } catch (const std::exception& e) {
+                std::cerr << "Error parsing line: " << line << " (" << e.what() << ")\n";
+                return false;
+            }
+            return true;
         }
     private:
         std::string expression;

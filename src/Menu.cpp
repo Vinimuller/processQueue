@@ -31,16 +31,8 @@ int Menu::run(){
             break;
         default:
             cout << "Comando não existe" << endl;
-            while(1);
+            return run();
             break;
-    }
-
-
-    if(input == 3){
-        arquivos.exibirCena("creditos");
-        userInput.rangedReadNumber(1,1);
-        return run();
-
     }
     return input;
 }

@@ -1,9 +1,11 @@
+#pragma once
 #include "Process.h"
 #include "Arquivos.h"
+#include "ComputingProcess.h"
 
 class Reading_Process : public Process, public Arquivos {
     public:
-        Reading_Process(FIFO<Process*> &_processQueue, const uint32_t _pid) 
+        Reading_Process(FIFO<Process*> *_processQueue, const uint32_t _pid) 
             : processQueue(_processQueue),
               fileName("computation.txt"),
               Process(_pid) {} 
@@ -23,23 +25,13 @@ class Reading_Process : public Process, public Arquivos {
                     buff += content[i];
                 }else{
                     std::cout << "Expression " << buff << " pushed to process queue " << std::endl;
-                    processQueue.push(new Computing_Process(buff + '\n', processQueue.getSize()+1));
+                    processQueue->push(new Computing_Process(buff + '\n', processQueue->getSize()+1));
                     buff = "";
                 }
             }
-
-
-                /*
-                    (ReadingProcess): deve ler completamente o arquivo de computações (computation.txt) e,
-                    para cada registro lido do arquivo deve criar um objeto de processo de cálculo (ComputingProcess) e adicioná-lo
-                    na lista de processos do sistema. Ao final da leitura, o processo deve “limpar” o arquivo. Vale lembrar que cada
-                    linha do arquivo é uma expressão aritmética.
-                */
-
-
             return 0;
         }
     private:
-        FIFO<Process*> &processQueue;
+        FIFO<Process*> *processQueue;
         std::string fileName;
 };

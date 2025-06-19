@@ -71,6 +71,10 @@ public:
         return value;
     }
 
+    T getFront(){
+        return front;
+    }
+
     // Search method — returns true if value is found, false otherwise
     bool search(const T& value) const {
         Node<T>* current = front;

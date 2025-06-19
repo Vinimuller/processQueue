@@ -13,19 +13,15 @@ class Process{
         }
 
         // Destructor
-        ~Process() {
+        virtual ~Process() {
 
         }
-        
 
         uint32_t getPID(){
             return pid;
         }
 
-        uint8_t execute(){
-            //execute process
-            return 0;
-        }
+        virtual uint8_t execute();
 
         // Cast operator to std::string
         operator std::string() const {

@@ -1,3 +1,4 @@
+#pragma once
 #include "Process.h"
 #include "Arquivos.h"
 
