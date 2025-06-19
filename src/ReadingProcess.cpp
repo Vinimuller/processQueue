@@ -1,0 +1,22 @@
+#include "../inc/classes/ReadingProcess.h"
+
+uint8_t Reading_Process::execute(){
+    std::cout << "-- Executando Reading_Process (pid: " << getPID() << ") --"<< std::endl;
+    
+    std::string content = lerArquivo(fileName);
+
+    //limparArquivo(fileName); Implementar remoção da pid específica de dentro do arquivo
+
+    std::string buff = "";
+    for(size_t i=0; i < content.length(); i++){
+        if(content[i] != '\n'){
+            buff += content[i];
+        }else{
+            std::cout << "Expression " << buff << " pushed to process queue " << std::endl;
+            processQueue->push(new Computing_Process(buff + '\n', processQueue->getSize()+1));
+            buff = "";
+        }
+    }
+    apagarArquivo(fileName);
+    return 0;
+}

@@ -15,26 +15,7 @@ class Reading_Process : public Process, public Arquivos {
         
         ~Reading_Process(){}
 
-        uint8_t execute(){
-            std::cout << "-- Executando Reading_Process (pid: " << getPID() << ") --"<< std::endl;
-            
-            std::string content = lerArquivo(fileName);
-
-            //limparArquivo(fileName); Implementar remoção da pid específica de dentro do arquivo
-
-            std::string buff = "";
-            for(size_t i=0; i < content.length(); i++){
-                if(content[i] != '\n'){
-                    buff += content[i];
-                }else{
-                    std::cout << "Expression " << buff << " pushed to process queue " << std::endl;
-                    processQueue->push(new Computing_Process(buff + '\n', processQueue->getSize()+1));
-                    buff = "";
-                }
-            }
-            apagarArquivo(fileName);
-            return 0;
-        }
+        uint8_t execute();
     private:
         FIFO<Process*> *processQueue;
         std::string fileName;
