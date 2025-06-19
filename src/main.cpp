@@ -2,16 +2,11 @@
 #include <string>
 #include <locale>
 
-#include "../inc/classes/Arquivos.h"
-#include "../inc/classes/UserInput.h"
-#include "../inc/classes/Tela.h"
 #include "../inc/classes/Menu.h"
+#include "../inc/classes/Sistema.h"
 
 using namespace std;
 
-Arquivos arquivo;
-UserInput userInput;
-Tela tela;
 Sistema sistema;
 Menu menu(&sistema);
 
