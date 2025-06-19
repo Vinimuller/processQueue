@@ -19,8 +19,8 @@ struct ComputationData {
 template <typename T>
 class FIFO {
 private:
-    Node<T>* front;
-    Node<T>* rear;
+    Node<T>* front = nullptr;
+    Node<T>* rear = nullptr;
 
     uint32_t size = 0;
 
@@ -50,6 +50,7 @@ public:
             rear = newNode;
         }
         size++;
+        return;
     }
 
     // Pop method — removes and returns the value from the front of the queue
@@ -72,7 +73,7 @@ public:
     }
 
     T getFront(){
-        return front;
+        return front->data;
     }
 
     // Search method — returns true if value is found, false otherwise

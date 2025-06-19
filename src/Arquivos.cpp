@@ -14,9 +14,9 @@ void Arquivos::exibirCena(int cenaAtual) {
 
         // Clear the screen
     #ifdef _WIN32
-        system("cls"); // For Windows
+        //system("cls"); // For Windows
     #else
-        system("clear"); // For Unix-like systems (Linux, macOS)
+        //system("clear"); // For Unix-like systems (Linux, macOS)
     #endif
 
     std::string nomeArquivo = this->folderPath + std::to_string(cenaAtual) + ".txt";
@@ -38,9 +38,9 @@ void Arquivos::exibirCena(int cenaAtual) {
 void Arquivos::exibirCena(string cenaAtual) {
     // Clear the screen
     #ifdef _WIN32
-        system("cls"); // For Windows
+        //system("cls"); // For Windows
     #else
-        system("clear"); // For Unix-like systems (Linux, macOS)
+        //system("clear"); // For Unix-like systems (Linux, macOS)
     #endif
 
     std::string nomeArquivo = this->folderPath + cenaAtual + ".txt";
@@ -63,13 +63,13 @@ void Arquivos::exibirCena(string cenaAtual) {
 
 // Escreve conteúdo em um arquivo
 bool Arquivos::escreverArquivo(const std::string& filename, const std::string& content) {
-    string nomeArquivo = this->folderPath + filename + ".txt";
-    std::ofstream file(nomeArquivo);
+    std::string nomeArquivo = this->folderPath + filename + ".txt";
+    std::ofstream file(nomeArquivo, std::ios::app);  // Abre em modo append
     if (!file.is_open()) {
         std::cerr << "Erro ao abrir arquivo para escrita: " << filename << "\n";
         return false;
     }
-    file << content;
+    file << content;  // Adiciona o conteúdo com uma nova linha
     file.close();
     return true;
 }
@@ -89,3 +89,4 @@ string Arquivos::lerArquivo(const std::string& filename) {
     file.close();
     return content;
 }
+

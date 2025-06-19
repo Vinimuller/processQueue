@@ -12,22 +12,13 @@ using namespace std;
 Arquivos arquivo;
 UserInput userInput;
 Tela tela;
-Menu menu;
+Sistema sistema;
+Menu menu(&sistema);
 
 int main() {
     setlocale(LC_ALL, "pt_BR.UTF-8"); // usa o locale do sistema
-
-    switch(menu.run()){
-        case 1:
-            // Nova aventura
-            break;
-        case 2:
-            // Carregar aventura 
-            break;
-        default:
-            return 0;
-            break;
+    while(true){
+        if(menu.run() == 6) break;
     }
-
     return 0;
 }

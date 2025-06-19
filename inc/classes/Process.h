@@ -8,6 +8,9 @@
 class Process{
     public:
         // Constructor
+
+        Process(){};
+
         Process(const uint32_t _pid) {
             pid = _pid;
         }
@@ -21,7 +24,7 @@ class Process{
             return pid;
         }
 
-        virtual uint8_t execute();
+        virtual uint8_t execute() = 0;
 
         // Cast operator to std::string
         operator std::string() const {

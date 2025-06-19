@@ -5,5 +5,6 @@ Selecione uma opção
 3 - Executar processo especifico
 4 - Salvar fila de processos
 5 - Carregar do arquivo a fila de processos
+6 - Desligar sistema
 
 Digite a opção: 

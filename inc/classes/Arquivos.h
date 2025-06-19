@@ -12,6 +12,7 @@ using namespace std;
 class Arquivos
 {
 public:
+	Arquivos(){}
 	void exibirCena(int cenaAtual);
 	void exibirCena(string cenaAtual);
 	

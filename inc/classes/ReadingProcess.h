@@ -5,6 +5,9 @@
 
 class Reading_Process : public Process, public Arquivos {
     public:
+
+        Reading_Process(){}
+    
         Reading_Process(FIFO<Process*> *_processQueue, const uint32_t _pid) 
             : processQueue(_processQueue),
               fileName("computation.txt"),
@@ -29,6 +32,7 @@ class Reading_Process : public Process, public Arquivos {
                     buff = "";
                 }
             }
+            apagarArquivo(fileName);
             return 0;
         }
     private:

@@ -4,11 +4,13 @@
 class Computing_Process : public Process {
     public:
 
+        Computing_Process(){}
+
         Computing_Process(std::string _expression, const uint32_t _pid) 
             : expression(_expression),
               Process(_pid) {}
 
-        ~Computing_Process(){}
+        ~Computing_Process(){};
 
         uint8_t execute() {
             std::cout << "-- Executando Computing_Process (pid: " << getPID() << ") --"<< std::endl;
@@ -49,7 +51,8 @@ class Computing_Process : public Process {
             } catch (const std::exception& e) {
                 std::cerr << "Error parsing line: " << line << " (" << e.what() << ")\n";
                 return false;
-            }
+            }            
+
             return true;
         }
     private:
