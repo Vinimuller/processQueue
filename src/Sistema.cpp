@@ -138,8 +138,11 @@ void Sistema::executarProcessoEspecifico(){
 
     bool processoEncontrado = false;
 
-    for(uint32_t i = 0; i < processQueue->getSize(); i++){
+    int tamanhoProcessQueue = processQueue->getSize();
+
+    for(uint32_t i = 0; i < tamanhoProcessQueue; i++){
         Process* temp = processQueue->getFront();
+
         if(temp->getPID() == pidEspecifico){
             executarProximo();
             processoEncontrado = true;

@@ -10,7 +10,7 @@ class Reading_Process : public Process, public Arquivos {
     
         Reading_Process(FIFO<Process*> *_processQueue, const uint32_t _pid) 
             : processQueue(_processQueue),
-              fileName("computation.txt"),
+              fileName("computation"),
               Process(_pid) {} 
         
         ~Reading_Process(){}
