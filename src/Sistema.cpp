@@ -15,7 +15,7 @@ uint8_t Sistema::executePID(FIFO<Process*> *processQueue, uint32_t _pid){
     // processQueue.display();
 
     //Procura por toda fifo.
-    for(int i = 0; i < size; i++){
+    for(uint32_t i = 0; i < size; i++){
         temp = processQueue->pop();
         if(temp->getPID() != _pid){
             //Não é o pid, devolve pra fila
@@ -36,7 +36,6 @@ uint8_t Sistema::executePID(FIFO<Process*> *processQueue, uint32_t _pid){
 uint8_t Sistema::executeNextProcess(FIFO<Process*> *processQueue){
     // std::cout << "\n\n" << "------- Execute PID ------- " << _pid << "\n\n";
     
-    uint32_t size = processQueue->getSize();
     Process* temp = nullptr;
     uint8_t  result = 1;
 
@@ -67,13 +66,10 @@ void Sistema::criarProcesso(){
         case COMPUTING_PROCESS:
             {
             cout << "Insira a expressao a ser computada:" << endl;
-            bool expressaoCorreta = false;
             string newExpression;
             getline(cin >> ws, newExpression);
             if(computingProcess.verifyExpression(newExpression)){
-                cout << "Entrou no if" << endl;
                 processQueue->push(new Computing_Process(newExpression, generateNewID()));
-                cout << "Deu push na fila" << endl;
                 processoFinalizado = true;
                 cout << "Expressão inserida com sucesso" << endl;
             } else {
@@ -96,12 +92,13 @@ void Sistema::criarProcesso(){
         case WRITING_PROCESS:
             {
                 cout << "Insira a expressao escrita no arquivo:" << endl;
-                bool expressaoCorreta = false;
                 string newExpression;
                 getline(cin >> ws, newExpression);
                 if(computingProcess.verifyExpression(newExpression)){
                     processQueue->push(new Writing_Process(newExpression, generateNewID()));
                     processoFinalizado = true;
+                } else {
+                    cout << "Expressão inválida" << endl;
                 }
                 break;
             }
@@ -113,13 +110,11 @@ void Sistema::criarProcesso(){
 }
 
 void Sistema::executarProximo(){
-    uint32_t size = processQueue->getSize();
-    if(size == 0){
+    if(processQueue->getSize() == 0){
         cout << "Fila de processos vazia..." << endl;
         return;
     }
     Process* temp = nullptr;
-    uint8_t  result = 1;
 
     std::cout << std::endl;
     processQueue->display();
@@ -131,7 +126,7 @@ void Sistema::executarProximo(){
 
 void Sistema::executarProcessoEspecifico(){
     cout << "Insira pid do processo especifico:" << endl;;
-    int pidEspecifico;
+    uint32_t pidEspecifico;
     cin >> pidEspecifico;
     
     FIFO<Process*> *temporaryQueue = new FIFO<Process*>();
@@ -140,7 +135,7 @@ void Sistema::executarProcessoEspecifico(){
 
     int tamanhoProcessQueue = processQueue->getSize();
 
-    for(uint32_t i = 0; i < tamanhoProcessQueue; i++){
+    for(int i = 0; i < tamanhoProcessQueue; i++){
         Process* temp = processQueue->getFront();
 
         if(temp->getPID() == pidEspecifico){

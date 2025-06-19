@@ -7,8 +7,8 @@ class Printing_Process : public Process {
         Printing_Process(){}
 
         Printing_Process(FIFO<Process*> *_processQueue, const uint32_t _pid) 
-            : processQueue(_processQueue),
-              Process(_pid) {}
+            : Process(_pid),
+            processQueue(_processQueue){}
 
         ~Printing_Process(){}
 

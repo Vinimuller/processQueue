@@ -9,9 +9,9 @@ class Reading_Process : public Process, public Arquivos {
         Reading_Process(){}
     
         Reading_Process(FIFO<Process*> *_processQueue, const uint32_t _pid) 
-            : processQueue(_processQueue),
-              fileName("computation"),
-              Process(_pid) {} 
+            : Process(_pid),
+            processQueue(_processQueue),
+            fileName("computation") {} 
         
         ~Reading_Process(){}
 
@@ -23,7 +23,7 @@ class Reading_Process : public Process, public Arquivos {
             //limparArquivo(fileName); Implementar remoção da pid específica de dentro do arquivo
 
             std::string buff = "";
-            for(int i=0; i < content.length(); i++){
+            for(size_t i=0; i < content.length(); i++){
                 if(content[i] != '\n'){
                     buff += content[i];
                 }else{

@@ -8,9 +8,9 @@ class Writing_Process : public Process, public Arquivos{
         Writing_Process(){}
 
         Writing_Process(std::string _expression, const uint32_t _pid)
-            : expression(_expression),
-              fileName("computation"),
-              Process(_pid){}
+            : Process(_pid),
+            expression(_expression),
+            fileName("computation"){}
         
         ~Writing_Process(){}
 

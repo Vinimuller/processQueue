@@ -7,8 +7,8 @@ class Computing_Process : public Process {
         Computing_Process(){}
 
         Computing_Process(std::string _expression, const uint32_t _pid) 
-            : expression(_expression),
-              Process(_pid) {}
+            : Process(_pid),
+            expression(_expression){}
 
         ~Computing_Process(){};
 
@@ -35,8 +35,6 @@ class Computing_Process : public Process {
         }
 
         bool verifyExpression(std::string line){
-            ComputationData computationData;
-
             // Parse the line (assuming format: number1 operator number2)
             size_t op_pos = line.find_first_of("+-*/");
             if (op_pos == std::string::npos) {
@@ -45,9 +43,8 @@ class Computing_Process : public Process {
             }
 
             try {
-                computationData.operand1 = std::stoi(line.substr(0, op_pos));
-                computationData.operand2 = std::stoi(line.substr(op_pos + 1));
-                computationData.op = line[op_pos];
+                std::stoi(line.substr(0, op_pos));
+                std::stoi(line.substr(op_pos + 1));
             } catch (const std::exception& e) {
                 std::cerr << "Error parsing line: " << line << " (" << e.what() << ")\n";
                 return false;
