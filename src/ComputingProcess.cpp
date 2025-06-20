@@ -22,26 +22,6 @@ uint8_t Computing_Process::execute() {
     return 0;
 }
 
-bool Computing_Process::verifyExpression(std::string line){
-    // Parse the line (assuming format: number1 operator number2)
-    size_t op_pos = line.find_first_of("+-*/");
-    if (op_pos == std::string::npos) {
-        std::cerr << "Invalid operation format: " << line << "\n";
-        return false;
-    }
-
-    try {
-        std::stoi(line.substr(0, op_pos));
-        std::stoi(line.substr(op_pos + 1));
-    } catch (const std::exception& e) {
-        std::cerr << "Error parsing line: " << line << " (" << e.what() << ")\n";
-        return false;
-    }            
-
-    return true;
-}
-
-
 ComputationData Computing_Process::parseLineContent(std::string line){
     ComputationData computationData;
 
@@ -49,6 +29,8 @@ ComputationData Computing_Process::parseLineContent(std::string line){
     size_t op_pos = line.find_first_of("+-*/");
     if (op_pos == std::string::npos) {
         std::cerr << "Invalid operation format: " << line << "\n";
+        computationData.isValid = false;
+        return computationData;
     }
 
     try {
@@ -57,6 +39,7 @@ ComputationData Computing_Process::parseLineContent(std::string line){
         computationData.op = line[op_pos];
     } catch (const std::exception& e) {
         std::cerr << "Error parsing line: " << line << " (" << e.what() << ")\n";
+        computationData.isValid = false;
     }
     return computationData;
 }

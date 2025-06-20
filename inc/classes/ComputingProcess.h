@@ -22,12 +22,12 @@ class Computing_Process : public Process {
             return "Expressão: " + expression;
         }
 
-        bool verifyExpression(std::string line);
+        ComputationData parseLineContent(std::string line);
+
     private:
         std::string expression;
         ComputationData computationData;
 
-        ComputationData parseLineContent(std::string line);
 
         double runComputation(ComputationData computationData);
 };

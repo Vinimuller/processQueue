@@ -65,7 +65,8 @@ void Sistema::criarProcesso(){
             cout << "Insira a expressao a ser computada:" << endl;
             string newExpression;
             getline(cin >> ws, newExpression);
-            if(computingProcess.verifyExpression(newExpression)){
+            ComputationData data = computingProcess.parseLineContent(newExpression);
+            if(data.isValid){
                 processQueue->push(new Computing_Process(newExpression, generateNewID()));
                 processoFinalizado = true;
                 cout << "Expressão inserida com sucesso" << endl;
@@ -91,7 +92,8 @@ void Sistema::criarProcesso(){
                 cout << "Insira a expressao escrita no arquivo:" << endl;
                 string newExpression;
                 getline(cin >> ws, newExpression);
-                if(computingProcess.verifyExpression(newExpression)){
+                ComputationData data = computingProcess.parseLineContent(newExpression);
+                if(data.isValid){
                     processQueue->push(new Writing_Process(newExpression, generateNewID()));
                     processoFinalizado = true;
                 } else {

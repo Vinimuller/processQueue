@@ -24,10 +24,9 @@ uint8_t Printing_Process::execute(){
 
     uint32_t size = processQueue->getSize();
     Process* temp = nullptr;
-    uint8_t  result = 1;          
 
     //Procura por toda fifo.
-    for(int i = 0; i < size; i++){
+    for(uint32_t i = 0; i < size; i++){
         temp = processQueue->pop();
 
         printProcess(temp);

@@ -13,6 +13,7 @@ struct ComputationData {
     char op;
     int operand1;
     int operand2;
+    bool isValid = true;
 };
 
 // FIFO Queue class (templated)
