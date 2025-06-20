@@ -20,6 +20,7 @@ public:
 
 	// Escreve em arquivo
 	bool escreverArquivo(const string& filename, const string& content);
+	bool sobrescreverArquivo(const string& filename, const string& content);
 
 	// Lê conteúdo de um arquivo e retorna como string
 	string lerArquivo(const string& filename);

@@ -74,6 +74,19 @@ bool Arquivos::escreverArquivo(const std::string& filename, const std::string& c
     return true;
 }
 
+// Escreve conteúdo em um arquivo
+bool Arquivos::sobrescreverArquivo(const std::string& filename, const std::string& content) {
+    std::string nomeArquivo = this->folderPath + filename + ".txt";
+    std::ofstream file(nomeArquivo);  // Abre em modo append
+    if (!file.is_open()) {
+        std::cerr << "Erro ao abrir arquivo para escrita: " << filename << "\n";
+        return false;
+    }
+    file << content;  // Adiciona o conteúdo com uma nova linha
+    file.close();
+    return true;
+}
+
 // Lê conteúdo de um arquivo e retorna como string
 string Arquivos::lerArquivo(const std::string& filename) {
     string nomeArquivo = this->folderPath + filename + ".txt";

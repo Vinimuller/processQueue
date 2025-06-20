@@ -177,7 +177,7 @@ bool Sistema::salvarFilaDeProcessos(){
         processQueue->push(temp);
     }
 
-    arquivos.escreverArquivo(filename,content);
+    arquivos.sobrescreverArquivo(filename,content);
 
     std::cout << "Queue saved to " << filename << "\n";
     cin.get(); 
@@ -235,7 +235,8 @@ bool Sistema::carregarFilaDeProcessos(){
             char type = std::stoi(token);
             
             std::getline(iss, token, '|');
-            uint32_t pid = std::stoi(token);
+            //uint32_t pid = std::stoi(token);
+            uint32_t pid = generateNewID();
 
             std::getline(iss, token, '|');
             std::string data = token;
