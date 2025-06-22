@@ -26,7 +26,6 @@ private:
     Tela tela;
 
     uint8_t executePID(FIFO<Process*> *processQueue, uint32_t _pid);
-    uint8_t executeNextProcess(FIFO<Process*> *processQueue);
     void createProcess(FIFO<Process*> *processQueue, int type, uint32_t pid, std::string data);
 
     int generateNewID();

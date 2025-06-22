@@ -11,6 +11,7 @@ uint8_t Sistema::executePID(FIFO<Process*> *processQueue, uint32_t _pid){
     
     uint32_t size = processQueue->getSize();
     Process* temp = nullptr;
+    Process* paraExecutar = nullptr;
     uint8_t  result = 1;
 
     //Procura por toda fifo.
@@ -21,30 +22,18 @@ uint8_t Sistema::executePID(FIFO<Process*> *processQueue, uint32_t _pid){
             processQueue->push(temp);
         }else{
             //É o PID. Executa
-            temp->execute();
-            delete temp;
+            paraExecutar = temp;
             result = 0;
         }
     }
 
+    if(paraExecutar != nullptr){
+        paraExecutar->execute();
+        delete paraExecutar;
+    }
+
     // 1 -> processo não encontrado
     // 0 -> processo executado
-    return result;
-}
-
-uint8_t Sistema::executeNextProcess(FIFO<Process*> *processQueue){
-    // std::cout << "\n\n" << "------- Execute PID ------- " << _pid << "\n\n";
-    
-    Process* temp = nullptr;
-    uint8_t  result = 1;
-
-    std::cout << std::endl;
-    processQueue->display();
-
-    temp = processQueue->pop();
-    temp->execute();
-    delete temp;
-
     return result;
 }
 
@@ -132,31 +121,11 @@ void Sistema::executarProcessoEspecifico(){
     cout << "Insira pid do processo especifico:" << endl;;
     uint32_t pidEspecifico;
     cin >> pidEspecifico;
-    
-    FIFO<Process*> *temporaryQueue = new FIFO<Process*>();
 
-    bool processoEncontrado = false;
+    //Fix depois da apresentação
+    executePID(processQueue, pidEspecifico);
 
-    int tamanhoProcessQueue = processQueue->getSize();
-
-    for(int i = 0; i < tamanhoProcessQueue; i++){
-        Process* temp = processQueue->getFront();
-
-        if(temp->getPID() == pidEspecifico){
-            executarProximo();
-            processoEncontrado = true;
-        } else {
-            temporaryQueue->push(processQueue->pop());
-        }
-    }
-
-    if(processoEncontrado == false){
-      cout << "Processo não encontrado" << endl; 
-      cin.get(); 
-    } 
-
-    processQueue = temporaryQueue;
-
+    cin.get();
     tela.aguarde();
 }
 
